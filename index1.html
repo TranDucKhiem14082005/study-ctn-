@@ -1,87 +1,25 @@
 <!DOCTYPE html>
-<!-- 
-    1. h1- h6: heading(tiêu đề)
-        //thường chỉ sử dụng 1 thẻ h1(chữ to nhất) trong html và các h2...h6 thì các chữ sẽ nhỏ dần
-
-    2. p - paragraph: đoạn văn bản.
-
-    3. img - image: hình ảnh.
-        //src trong img là địa chỉ nguồn của 1 hình ảnh mà mình muốn đưa vào website của mình.
-        //alt là thuộc tính không bắt buộc nếu mà cho vào thì nó sẽ phát huy tác dụng khi mà hình ảnh nó bị lỗi(mình nhập vào 1 đoạn văn hoặc 1 từ)
-        //alt dùng để phòng trừ trường hợp mất mạng,mạng yếu hoặc tất cả các liên quan đến người vào website của mình.
-
-    4. a - anchor: (mỏ neo): neo 1 cái liên kết nào nó. kiểu như là chú thích cho mình biết à là cái hình đó cái vấn đề đó nó có ở trang này nè(link ở đây) bạn có thể vào xem tại đây
-
-    5. ul, li: unordered list(ul: là những dấu chấm để đánh dấu từ trên xuống của một danh sách nào đó.) còn ol( là những con số để đánh dấu từ trên xuống của một danh sách nào đó)
-    , list item(li) dùng để hiển thị những danh sách ( tức là 1 danh sách chứa nhiều phần tử bên trong nó.)
-
-    6. table: dùng nó mỗi khi muốn kẻ ra một cái bảng
-        /thead(phần đầu): th(số thứ tự)
-         và tbody(phần thân): tr(dòng): trong td sẽ có thẻ td
-
-    7. Input
-
-    8. button
-
-    9. div: tạo ra 1 khối bao quanh những phần tử khác.
-        ví dụ như gia đình mình được bao quanh bởi một bức tường ở nhà. (cái bức từng đó là div)
-
-  -->
-
-  <!-- 
-    1. attribute?: nó là thuộc tính của html và nằm trong thẻ mở.
-   -->
 <html>
-    <!--
-        // cái này dùng để chú thích // phím tắt ctrl + /
-        vô hiệu hóa các dòng code
-    -->
-    <!-- phần đầu -->
     <head>
-        <title>Trần Đức Khiêm</title>
+        <title>Hi, I'm Khiêm hehehe</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html{
+                font-size: 50px;
+            }
+
+            h1{
+                font-size: 1rem;
+            }
+        </style>
     </head>
        
     <body>
-        <!-- <h1 title="đây là tiêu đề">Attribute? </h1>
-        những thuộc tính trong thẻ title được gọi là attribute? -->
-       <div>
-            <h1> Mình nè NOBITA ngốc nghếch, ngờ nghệch </h1>
-
-            <input type="checkbox">
-            <input type="text">
-            <input type="radio">
-
-            <button>đăng kí</button>
-            
-            <p>Kể từ hôm nay 15.4, Hà Nội đồng loạt thí điểm trông giữ xe không thu tiền mặt ở nhiều quận nội thành nhằm giúp minh bạch trong công tác quản...</p>
-            <img src="https://images2.thanhnien.vn/528068263637045248/2024/4/14/a7f554e761bdcfe396ac-171310323179819718942.jpg" alt="">
-            <a href="https://thanhnien.vn/">tới trang báo thanh niên </a>
-            <ul>
-                <li>thời sự</li>             
-                <li>thế gi  ới</li>
-                <li>kinh tế</li>
-                <li>sức khỏe</li>
-            </ul>
-            <table>
-                <thead> 
-                    <th>STT</th>
-                    <th>tên</th>
-                    <th>địa chỉ</th>
-                </thead>
-                <tbody>
-                    <tr>
-                            <td>1</td>
-                            <td>Khiêm Trần</td>
-                            <td>Phú Yên</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Khiêm Trần2</td>
-                        <td>Phú Yên2</td>
-                </tr>
-                </tbody>
-            </table>
-       </div>
+        <div class="box"></div>
+        <div style ="font-size: 20px;"></div>
+        <h1>Xin chao cac ban</h1>
+        
+       
     </body>
 </html>

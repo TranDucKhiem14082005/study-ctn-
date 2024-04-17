@@ -1,0 +1,11 @@
+:root { 
+     /* biến toàn cục */
+     /* khi đã có biến toàn cục thì cũng có biến cục bộ. */
+    --text-color: red;
+}
+
+h1{
+    --my-color: green;
+    color: var(--text-color);
+
+}
