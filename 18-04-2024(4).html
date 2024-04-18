@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HI,I'm Khiem</title>
+        <meata charset="utf-8">
+        <style>
+            /* .box{
+                width: 100%;
+                height: 100vh;
+                /* background-image: url(https://vyctravel.com/libs/upload/ckfinder/images/cate/1501151494_Chau-au.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain; */
+                /* những cái thẻ background trên đều có thể viết gọn vào 1 cái background */
+                /* background:  url(https://vyctravel.com/libs/upload/ckfinder/images/cate/1501151494_Chau-au.jpg) no-repeat center / contain; 
+                }                
+                */
+                
+                .box{
+                    width: calc(80% + 20px);
+                    height: 120px;
+                    background-color: rgb(123,31,0);
+                    /* calc(): dùng để tính toán */
+
+                } 
+                
+                .box::after{
+                    content: attr(data-title);
+                }
+                a::after{
+                    content: " (" attr(href) ")";
+                }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="box" data-title="đây là box màu hồng"></div>
+        </div>
+
+        <a href="https://fullstack.com.vn">học lập trình</a>
+        <div>
+            <h1>CSS FUNCTION</h1>
+            <ol>
+                <li>var()</li>
+                <li>linear-gradient()</li>
+                <li>rgba()</li>
+                <li>rgb()</li>
+                <li>calc</li>
+                <li>attr()</li>
+            </ol>
+        </div>
+    </body>
+</html>
