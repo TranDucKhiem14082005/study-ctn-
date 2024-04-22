@@ -1,0 +1,194 @@
+body{
+    background-color: #ccc;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    background-color: #EF5211;
+    min-width: 100px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+}
+.nav-item{
+    color: #fff;
+    display: inline-block;
+    margin: 0 8px;
+
+    
+}
+.form-container{
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: #fff;
+}
+.form_row{
+    padding: 8px 0;
+    display: flex;
+}
+.form_label{
+    min-width: 90px;
+    /* chiều dài tối thiểu.
+    tức là thằng password còn lại bao nhiêu khoảng trống thi nó sẽ chiếm hết.  */
+}
+.form_input{
+    flex: 1;
+    /* trong layout flex có nhiêu item mà có một ông có giá trị flex >= 1 thì nó sẽ cố gắng chiếm hết cái khoảng không gian theo chiều của main axis */
+}
+.column-layout{
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+   
+}
+.column-item{
+    padding: 0 16px;
+
+    /* // thằng flexx 1: nếu mà 1 thằng có flex 1 thôi thì nó sẽ cố gắng chiếm khoảng trống theo trục main axis mà nó có thể chiếm.
+    // nếu mà cả 3 ông đều có flex bằng nhau thì các thông số của chúng cũng bằng nhau. */
+}   
+.sidebar-one{
+
+    flex: 1;
+}
+.main-column{
+   flex: 3;
+}
+.sidebar-two{
+    flex: 1;
+}
+.feature-layout{
+    margin-top: 36px;
+    display: flex;
+
+    justify-content: space-around;
+  
+}
+.feature-item{
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%
+    /* //xét thằng main sai */
+}
+.feature-item:nth-child(1){
+    background-color: rgb(123,213,231);
+    /* // phải ghi sát vào nếu không nó sẽ bị lỗi ( thử đi rồi sẽ biết nó bị lỗi gì) */
+}
+.feature-item:nth-child(2){
+    background-color: rgb(121,13,31);
+}
+.feature-item:nth-child(3){
+    background-color: rgb(233,213,231);
+}
+.wap-layout{
+    display: flex;
+    justify-content: space-around;
+    margin: 36px;
+    padding: 32px 0 32px 0;
+    background-color: #fff;
+    flex-wrap: wrap-reverse;
+
+}
+.wap-layout-item{
+    background-color: #E51;
+    color: #fff;
+    width: 120px;
+    height: 120px;
+    align-content: center;
+    font-size: 60px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 90px;
+    
+}
+.center-layout{
+    background-color: #ccc;
+    min-width: 720px;
+    min-height: 420px;
+    display: flex;
+}
+
+.center-layout-item{
+    width: 700px;
+    height: 400px;
+    background-color: aquamarine;
+    align-content: center;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+}
+.char-layout{
+    background-color: #fff;
+    padding: 32px 0;
+    display: flex;
+    height: 320px;
+    justify-content: space-around;
+    align-items: flex-end;
+    align-self: flex-end;
+    animation: growth ease-in 1s;
+}
+@keyframes growth{
+    from{
+        opacity: 0;
+        height:(var(--percent) - 50%);
+    }
+    to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}
+.char-layout-item{
+    background-color: #E51;
+    color: #fff;
+    width: 50px;
+    height: var(--percent);
+    text-align: center;
+
+}
+
+.end-layout{
+    margin: 12px auto 46px auto;
+    padding: 32px 0;
+    display: flex;   
+    max-width: 740px;
+    min-height: 360px;
+    flex-direction: row;
+}
+.end-layout-frist{
+    padding: 4px 6px;     
+    background-color: #fff;
+    flex: 1;
+    
+}
+.end-layout-second{
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+
+
+}
+.end-layout-second-one{
+    padding: 4px 16px;
+    flex: 1;
+    background-color: rgb(214, 152, 219);
+    
+    
+
+}
+.end-layout-second-two{
+    padding: 4px 16px;
+    flex: 1;    
+    background-color: aquamarine;
+
+}
