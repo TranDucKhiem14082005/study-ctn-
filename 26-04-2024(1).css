@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Helvetiva Neue";
+    background-color: #f4f4f5;
+
+}
+
+body > div{
+    margin: auto;
+}
+
+/* Block */
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+}
+
+.btn--size-l{
+    padding: 16px 56px;
+}
+
+.btn--size-s{
+    padding: 8px 32px;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+/* css cho thang btn o sau */
+
+/* một cái button thì có 2 dạng: + enabled: bấm được
+                            + disabled: không bấm được */
+
+.btn + .btn {
+    margin-left: 16px;
+}
+
+.btn--success{
+    background-color: #71be34;
+}
+
+.btn--warn{
+    background-color: #ffb702;
+}
+
+.btn--danger{
+    background-color: #ff623d;
+}
+
+.btn--disabled{
+    opacity: 0.5 !important;
+    cursor: default;
+}
+
+
+#toast{
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    /* z-index: 999999; */
+}
+
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+
+}
