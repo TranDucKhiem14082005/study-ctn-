@@ -1,0 +1,190 @@
+* {
+    /* khi mà sử dụng dấu * này thì tất cả các thẻ đều thành trở thành
+    tính năng mà mình muốn CSS
+     */
+}
+
+:root { 
+    --text-color: red;
+    /* Đặt biến như thế này gọi là global (toàn cục) */
+}
+
+h1 {
+    /* đặt biến trong thẻ gọi là local (cục bộ) */
+    color: var(--text-color)
+}
+
+.box {
+    /* width: 100px;
+    height: 100px;
+    font-size: 26px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content:center;     */
+    /* float đưa những elemem chịu sự ảnh hưởng theo hướng mà
+    chúng ta set cho nó, và nó cũng xếp theo đúng thứ tự
+    như chúng ta đã đặt từ trước.
+    float: left;
+    */
+}
+.box1 {
+    background-color: #000;
+}
+
+.box2 {
+    background-color: bisque;
+}
+
+.box3 {
+    background-color: brown;
+    /* padding: 10px;
+    solid có kích thước là 2px, nếu muốn border cho một hướng nào đó thì chúng ta cho những hướng còn lại về 0 
+    border: 10px solid #333;
+    border-top: 40px dashed orange; */
+    margin-left: auto;
+    /* margin: nếu mình margin element lớn hơn kích thước của thằng
+    chứa nó thì nó sẽ bị đẩy xuống dưới
+    */
+
+}
+
+/* CSS Box-sizing */
+.practice {
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    font-size: 20px;
+    padding: 30px;
+    border: 4px solid orange;
+    background-color: #333;
+    box-sizing: border-box;
+    /* box-sizing: border-box : Nó sẽ tính toán làm sao
+    khi có padding/border/ padding và border nếu trong
+    ngưỡng cho phép thì kích thước của 
+    element vẫn y như ban đầu, không thay đổi gì cả 
+    */
+}
+
+
+/* background-clip: Nó chỉ làm việc, hoặc tô màu từ tính năng nào mà
+chúng ta muốn. Ví dụ khi mà chúng ta sử dụng
+background-clip: border-box thì nó sẽ đổ, tràn từ border vào
+đến trong centent 
+*/
+
+/* .header {
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    padding: 20px;
+    border: 10px dashed orange;
+    box-sizing: border-box;
+    background-clip: content-box;
+} */
+/* background-image: dùng để đặt ảnh nền. có để đặt nhiều ảnh nền
+ảnh nào đặt lên trước thì nó sẽ lên trước.
+background-image: linear-gradient: dải màu chuyển, chuyển từ màu này
+đến màu khác
+*/
+
+/* 
+background-origin:
+*/
+.header {
+    /* width: 100%;
+    height: 300px;
+    background-color: #333; */
+
+    /* background-origin: giống như background-clip 
+    background-position: ; tùy chỉnh vị trí của ảnh nền. Trường hợp
+    căn giữa thì là center, nếu không ghi gtri thứ 2 thì nó sẽ hiểu là center
+
+    vd:
+    top 20px right 20px: nó sẽ đẩy element của mình xuống.
+    
+    */
+
+     /* 
+     background-image, background-repeat, background-position, 
+     background-size -> shorthanhd: background: màu,
+     background: url() no-repeat / center (position) / contain (size) 
+     */
+
+}
+
+/* CSS function
+.var()
+.linear-gradient()
+.rgba()
+.rgb(): Không có màu trong suốt
+.calc(): Dùng để tính toán
+.attr()
+*/
+
+/* 
+CSS Pseudo classes: Lớp giả
+:root: Biến toàn cục, sử dụng cho toàn thể element nằm bên trong HTML
+:hover: có thể định nghĩa vô số thuộc tính CSS, nhưng chỉ hoạt
+động khi trỏ chuột tới.
+:active: có thể định nghĩa vô số thuộc tính CSS, nhưng chỉ hoạt
+động khi bấm chuột.
+:first-child: Selector vào đứa con đầu tiên.
+:last-child: Selector vào đứa con cuối cùng.
+*/
+
+
+.header::before {
+    /* mặc định thẻ div được trình duyệt gán cho nó thuộc
+    tính display: block => chúng ta không cần gán cho nó nữa.
+     */
+    /* content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff; */
+}
+
+.header::after {
+    /* content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: orange; */
+}
+
+/* 
+CSS Pseudo-elements: Phần tử giả. Khi sử dụng phải có thuộc tính "content = "" "
+::before.  Khi tạo ra element giả before thì nó sẽ luôn đứng ở đâu.
+
+::after. Khi tạo ra element giả after thì nó sẽ luôn đứng ở cuối.
+
+::first-letter. Kí tự đầu tiên
+::first-line. Dòng đầu tiên
+::selection. Khi mình bôi đen 
+*/
+
+/* 
+Thuộc tính Position: 
+.Relative: Tương đối. Không phụ thuộc vào bất cứ thứ gì
+lấy vị trí nó đang đứng làm gốc tọa độ. 
+.Absolute: Tuyệt đối. Phụ thuộc vào thẻ cha gần nhất mà có thuộc
+tính position để nó lấy thẻ cha đó làm gốc tọa độ
+.Fixed: Vị trí phụ thuộc vào khung trình duyệt
+.Sticky:
+
+*/
+
+.box {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    position: relative;
+}
+
+.box-child {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+}

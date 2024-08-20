@@ -24,13 +24,52 @@
     <!-- 
     Mức độ ưu tiên:
     Priority:
-    1.Internal,External?
-    2.Inline - 1000
-    3.#id - 100
-    4.class - 10
-    5.tag - 1
-    6.Equal specificity?
-    7.Universal selector and inherited?
+    1.Internal,External? hai cách này không có cái nào hơn cái nào
+    chỉ có cái nào gọi sau thì cái đó sẽ được ưu tiên hơn.
+    *** !important: độ ưu tên cao nhất
+    2.Inline - 1000: 
+    3.#id - 100:
+    4.class - 10:
+    5.tag - 1:
+    6.Equal specificity?: Những cái nào mới hơn sẽ được ưu tên hơn
+    Mội lần thêm một cái thì nó sẽ tăng thứ tự ưu tên lên của cái đó.
+
+    7.Universal selector and inherited? - 0: Những cái chung của file
     -->
+
+    <!-- 
+    CSS Units?
+    1. Absolute units?: "Đơn vị tuyệt đối"
+    .px
+    .pl
+    .cm
+    .mm
+    .inch
+    .pc
+    2. Relatve units?: "Đơn vị tương đối": Đối tượng sử dụng 
+    không có cố định
+    .%: Phụ thuộc vào thẻ chứa nó
+    .rem: phụ thuộc vào thẻ html
+    .em: phụ thuộc (kế thừa)vào thuốc tính gần nhất chứa nó
+    .vw: viewport: độ rộng của trình duyệt mỗi 1dv là 1%
+    .vh: chiều cao
+    .vmin 
+    .vmax
+    .ex
+    .ch
+    -->
+    <!-- <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div> -->
+    <!-- 
+    padding,border: Làm tăng kích thước của element.
+    -->
+
+    <!-- <div class="practice">Cùng nhau ôn tập lại kiến thức</div> -->
+     <div class="header"></div>
+
+     <div class="box">
+        <div class="box-child"></div>
+     </div>
 </body>
 </html>
