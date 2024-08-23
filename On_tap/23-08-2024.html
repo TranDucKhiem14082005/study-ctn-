@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox nâng cao</title>
+</head>
+<body>
+    <!-- Bem: Là tiêu chuẩn đặt tên class khi viết CSS
+     
+    1.Ý nghĩa:
+    -Viết tắt của: Block Element Modifier
+    -Block: Khối
+    -Element: Thành phần trong khối
+    -Modifier: Bổ sung ý nghĩa cho `Block` hoặc `Element`
+
+    2. Tại sao phải sử dụng BEM
+    -Mỗi người đặt một kiểu
+    -Members đặt class trùng nhau,CSS đè lên nhau
+
+    3.Cú pháp:
+    -.block
+    -.block__element
+    
+
+    -.block--modifier
+    -.block__element--modifier
+
+    4. Tính ứng dụng
+    -Xây dựng layout website
+    -Xây dựng thành phần trên website
+
+    5. Ưu điểm
+    -Tính rõ ràng
+    -Tái sử dụng dễ dàng
+    -Giúp cả team làm việc với nhau dễ dàng hơn
+    -Tính module,không lo CSS của class này ảnh hưởng đến
+    CSS của class khác
+
+    6. Nhược điểm
+    -Tên class dài
+    -Một số người cho là xấu
+
+    7. Khi nào dùng BEM là phù hợp?
+    -Dự án có nhiều members
+    -Dự án lớn,số lượng pages nhiều hoặc số lượng các 
+    thành phần trên giao diện nhiều
+
+    8. Thực hành
+    -Làm button
+    -Làm message
+    -Làm 1 thành phần trên 
+
+    -->
+    <div class="card card--success">
+        <h3 class="card__heading">Saved</h3>
+        <p class="card__desc">Looks like you got a great idea.</p>
+        <div class="card__btn">OK,cool</div>
+    </div>
+    <div class="card card--error">
+        <h3 class="card__heading">Saved</h3>
+        <p class="card__desc">Looks like you got a great idea.</p>
+        <div class="card__btn">OK,cool</div>
+    </div>
+</body>
+</html>
