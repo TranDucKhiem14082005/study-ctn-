@@ -23,6 +23,27 @@ html {
     box-sizing: border-box;
 }
 
+/* 
+.grid {
+    .row {
+        .column {
+        }
+        .column {
+        }
+        .column {
+        }
+    }   
+     .row {
+        .column {
+        }
+        .column {
+        }
+        .column {
+        }
+    }       
+}
+*/
+/* Responsive */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -36,7 +57,26 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+
 }
+
+/* test */
+
+.grid__column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 17%;
+}
+
+.grid__column-10 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83%;
+}
+
+
 
 /* Animation */
 
