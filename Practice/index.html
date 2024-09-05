@@ -243,18 +243,21 @@
 
             </div>
         </header>
-        <div class="container">
+        <div class="app__container">
            <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row app__content">
                     <div class="grid__column-2">
                         <nav class="category">
                             <h3 class="category__heading">
-                                <i class="fa-solid fa-list"></i>
+                                <i class="category__heading-icon fa-solid fa-list"></i>
                                 Danh mục
                             </h3>
             
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">Sản phẩm</a>
+                                </li>
+                                <li class="category-item">
                                     <a href="#" class="category-item__link">L'ESPOIR</a>
                                 </li>
                                 <li class="category-item">
@@ -267,7 +270,69 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        
+                        <div class="home-filter">
+                            <span class="home-filter-title">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn--primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+
+                            <div class="seclect-input">
+                                <span class="seclect-input__label">Giá</span>
+                                <i class="seclect-input__icon fa-solid fa-chevron-down"></i>
+                                <!-- List options -->
+                                <ul class="seclect-input__list">
+                                    <li class="seclect-input__item">
+                                        <a href="" class="seclect-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="seclect-input__item">
+                                        <a href="" class="seclect-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/4
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fa-solid fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="home-product">
+                                <div class="grid__row">
+                                    <div class="grid__column-2">
+                                        <div class="home-product-item">
+                                            <div class="home-product-item__img" style="background-image: url(https://down-vn.img.susercontent.com/file/vn-11134258-7r98o-lzaej1859qch70);"></div>
+                                            <span class="home-product-item__shop-mall">Mall</span>
+                                            <h4 class="home-product-item__name">Chân váy | MANIA SKIRT - CLÉLIE</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-current">đ 247.000</span>
+                                                <span class="home-product-item__price-sale">-10%</span>
+                                            </div>
+                                            <div class="home-product-item__sale-price">
+                                                <span class="home-product-item__sale-price-current">Giảm đ45k</span>
+                                                <span class="home-product-item__sale-price-will">đ 2???.??0|9.9 lúc 00h00</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__racting">
+                                                    <i class="fa-solid fa-star"></i>5.0
+                                                </span>
+                                                <span class="home-product-item__sold">Đã bán 7</span>
+                                            </div>
+                                            <div class="home-product-item__brand">CLÉLIE</div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+
                     </div>
                 </div>
            </div>
