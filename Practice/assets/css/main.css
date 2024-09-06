@@ -339,8 +339,13 @@ header__logo-img
 .notify-name {
     display: block;
     font-size: 1.4rem;
+    line-height: 1.8rem;
     color: var(--black-color);
     font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
 .notify-description {
@@ -972,6 +977,11 @@ header__logo-img
 .home-product-item {
     background-color: var(--white-color);
     margin-top: 10px;
+    border: 1px solid #dfdfdf;
+}
+
+.home-product-item__content {
+    padding: 10px;
 }
 
 .home-product-item__img {
@@ -980,26 +990,32 @@ header__logo-img
     background-position: center;
 }
 
+.home-product-item__content-top {
+    margin-bottom: 4px;
+}
+
 .home-product-item-title {
     display: flex;
-    padding-left: 4px;
-    margin: 10px 0;
+    justify-items: center;
 }
 
 .home-product-item__shop-mall {
     display: flex;
+    height: 100%;
     color: var(--white-color);
     justify-content: center;
     background-color: #d0011b;
-    
+    border-radius: 3px;
+    margin-right: 2px;
+    padding: 0 3px;
 }
 
 .home-product-item__name {
-    margin: 10px;
+    margin: 0;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--text-color);
-    line-height: 1.8rem;
+    line-height: 1.4rem;
     height: 3.6rem;
     overflow: hidden;
     display: block;
@@ -1011,28 +1027,53 @@ header__logo-img
 }
 
 .home-product-item__price {
-
+   
+   
 }
 
 .home-product-item__price-current {
-
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    
 }
 
-.home-product-item__price-sale {
+.home-product-item__price-percent-sale {
+    margin: 0 4px;
+    color: #eb5071;
+    font-size: 0.9rem;
+    background-color: #feeeea;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.home-product-item__content-bottom {
 
 }
 
 .home-product-item__sale-price {
-
+    display: flex;
+    width: 100%;
+    height: 16px;
+    line-height: 1.3rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-product-item__sale-price-current {
-
+    color: var(--white-color);
+    background-color: #f69113;
+    padding: 0 2px;    
 }
 
 .home-product-item__sale-price-will {
-
+    font-size: 0.9rem;
+    margin-left: 4px;
+    border: 1px solid #f8bcb0;
+    color: #eb5071;
+    padding: 0 4px;
 }
+
+
 
 .home-product-item__action {
 
