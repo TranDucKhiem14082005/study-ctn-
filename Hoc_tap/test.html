@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./test.css">
-    <title>Document</title>
+    <title>Discount Ticket</title>
+    <style>
+        .ticket {
+            fill: #FF6600; /* Màu cam đặc trưng */
+            stroke: none;
+        }
+        .cutout {
+            fill: white;
+        }
+        .text {
+            font-size: 18px;
+            font-weight: bold;
+            fill: white; /* Màu trắng cho chữ */
+            text-anchor: middle;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div class="promotion-banner">
-        <div class="product-card">
-            <div class="product-image">
-                <img src="path-to-your-image.jpg" alt="Áo thun nữ Baby Tee">
-                <div class="product-thumbnails">
-                    <img src="path-to-your-thumbnail1.jpg" alt="Thumbnail 1">
-                    <img src="path-to-your-thumbnail2.jpg" alt="Thumbnail 2">
-                    <img src="path-to-your-thumbnail3.jpg" alt="Thumbnail 3">
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="mall-badge">Mall</div>
-                <h3 class="product-title">Áo thun nữ Baby Tee | LOVE SCENARIO</h3>
-                <div class="product-price">
-                    <span class="current-price">141.000đ</span>
-                    <span class="discount">-50%</span>
-                </div>
-                <div class="promo">
-                    <span>10% Giảm</span>
-                    <span>Giờ vàng 9.9</span>
-                </div>
-                <div class="rating">
-                    <span>⭐ 4.8</span>
-                    <span>Đã bán 81</span>
-                </div>
-            </div>
-        </div>
+
+    <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+        <!-- Hình dạng chính của vé giảm giá -->
+        <rect x="0" y="0" width="150" height="40" rx="5" ry="5" class="ticket"/>
+
+        <!-- Nhiều đường cắt khuyết hai bên -->
+        <!-- Bên trái -->
+        <circle cx="0" cy="5" r="4" class="cutout"/>
+        <circle cx="0" cy="15" r="4" class="cutout"/>
+        <circle cx="0" cy="25" r="4" class="cutout"/>
+        <circle cx="0" cy="35" r="4" class="cutout"/>
         
+        <!-- Bên phải -->
+        <circle cx="150" cy="5" r="4" class="cutout"/>
+        <circle cx="150" cy="15" r="4" class="cutout"/>
+        <circle cx="150" cy="25" r="4" class="cutout"/>
+        <circle cx="150" cy="35" r="4" class="cutout"/>
+
+        <!-- Văn bản giảm giá -->
+        <text x="75" y="25" class="text">Giảm ₫85k</text>
+    </svg>
 
 </body>
 </html>
