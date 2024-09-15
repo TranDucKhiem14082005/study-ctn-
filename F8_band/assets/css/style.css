@@ -29,8 +29,14 @@ html {
 }
 
 #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 46px;
     background-color: #000;
+    display: flex;
+    justify-content: space-between;
 }
 
 #nav, .subnav {
@@ -93,13 +99,30 @@ html {
     background-color: #ccc;
 }
 
+.header__search {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    margin-right: 16px;
+    border-radius: 2px;
+    padding: 0 32px;
+}
+
+.header__search:hover {
+    background-color: #ee4d2d;
+    cursor: pointer;
+}
+
 #slider {
+    margin-top: 46px;
     min-height: 400px;
     background-color: #444;
 }
 
 #content {
-
+    height: 1000px;
 }
 
 #footer {
