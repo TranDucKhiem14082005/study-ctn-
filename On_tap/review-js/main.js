@@ -264,6 +264,7 @@ kiểu dữ liệu được tạo ra chúng ta không mong muố (Object).
 // console.log(`Tôi là: ${firstName} ${lastName}`);
 
 // ============================= //
+/*
 var myString = 'Học JS JS tại F8!'
 /**
  * Làm việc về chuỗi
@@ -276,7 +277,7 @@ var myString = 'Học JS JS tại F8!'
  * 7. strim: Chuẩn hóa chuỗi (Chỉ xóa khoảng trắng ở đầu và cuối)
  * 8. split: Chuyển đổi chuỗi thành mảng.
  * 9. get a character by index: Lấy 1 kí tự bởi 1 vị trí cho trước
- */
+
 
 // 1: Length
 console.log(myString.length);
@@ -284,7 +285,7 @@ console.log(myString.length);
  * 2. Find index: Mình sẽ ghi kí tự và nó sẽ tìm đúng chỉ mục
  * đầu tiên của kí tự đó. Nếu mình gọi không có trong chuỗi thì nó sẽ
  * trả về -1
- */
+
 
 console.log(myString.indexOf('JS'));
 console.log(myString.indexOf('la')); // trả về -1 nếu kí tự không có trong chuỗi
@@ -338,3 +339,91 @@ console.log(mylanguages.charAt(-10)); //truyền sai thì nó sẽ trả về r�
 // cách 2: sử dụng []
 
 console.log(mylanguages[-100]); // Nếu truyền sai thì trả về undefined
+*/
+
+// ================ //
+
+// **** Kiểu số (Number) trong JavaScript
+
+/*
+1. Tạo giá trị Number
+    -Các cách tạo
+    -Dùng cách tạo nào? Tại sao?
+    -Kiểm tra data type
+
+2. Làm việc với Number
+    -To String: Chuyển sang kiểu chuỗi
+    -To Fixed: Làm tròn số
+ */
+/*
+var age = 19;
+console.log(age);
+console.log(typeof age);
+var otherNumber = new Number(19);
+console.log(otherNumber);
+console.log(typeof otherNumber);
+
+// Nếu thực hiện một phép tính không hợp lệ thì nó sẽ chuyển thành "NaN"
+
+var result = 200 / 'abc';
+console.log(result);
+console.log(typeof result); //Mặc dù nó trả về NaN những kiểu dữ liệu của nó vẫn là Number
+// NaN không phải là số, nhưng nó là sẽ đại diện cho một số không hợp lệ.
+
+// Muốn kiểm tra xem kết quả hoặc phép tình của mình có phải là NaN không thì: 
+console.log(isNaN(result));
+
+
+// 2. Làm việc với number
+
+console.log(age.toString()); //Lúc này KDL của nó cũng là String
+var Pi = 3.14;
+console.log(Pi.toFixed(3));
+// Nếu chúng ta k truyền gì vào trong hàm method toFixed() thì nó sẽ là tròn dưới hoặc trên 
+// theo tùy trường hợp, ví dụ: nếu 3.14 => 3, còn 3.5 =>4
+// Tức là sau dấu , nếu >= 5 thì làm tròn trên, ngược lại làm tròn dưới.
+
+console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển sang KDL string   
+*/
+
+
+//  ========================== //
+
+/**
+ * Mảng trong JavaScript - Array
+ * 1. Tạo mảng
+ *  - How to create array
+ *  - what do we should use way? why?
+ *  - check data type?
+ * 2. Truy xuất mảng
+ *  - Độ dài mảng
+ *  - Lấy phần tử theo index
+ */
+
+// Array có thể chứa tất cả các KDL trong JavaScript
+// KDL của Array là Object 
+var languages = [
+    'JavaScript',
+    'PHP',
+    'Ruby',
+    'Python',
+];
+
+console.log(languages);
+
+// Cách kiểm tra một cái có phải là Array hay không
+console.log(Array.isArray([]));
+
+// Độ dài
+console.log(languages.length);
+// Cách lấy phần tử theo index
+console.log(languages[2]);
+
+/**
+ * Làm việc với mảng
+ * 1. To String: chuyển sang KLD chuỗi
+ * 2. Join: chuyển thành một chuỗi
+ * 3.
+ */
+
+console.log(languages.toString());
