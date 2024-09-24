@@ -409,21 +409,69 @@ var languages = [
     'Python',
 ];
 
+var languages1 = [
+    'Java'
+]
+
+console.log(languages.toString());
+console.log(languages.join());
+console.log(languages.pop());
+console.log(languages.push('world'));
+console.log(languages.shift());
+console.log(languages.unshift('Dart'));
 console.log(languages);
+console.log(languages.splice(1,2));
+console.log(languages.splice(1,0,'Hello')); //Chèn
+console.log(languages.concat(languages1));
+console.log(languages.slice(0,1));
 
-// Cách kiểm tra một cái có phải là Array hay không
-console.log(Array.isArray([]));
+// // Cách kiểm tra một cái có phải là Array hay không
+// console.log(Array.isArray([]));
 
-// Độ dài
-console.log(languages.length);
-// Cách lấy phần tử theo index
-console.log(languages[2]);
+// // Độ dài
+// console.log(languages.length);
+// // Cách lấy phần tử theo index
+// console.log(languages[2]);
 
 /**
  * Làm việc với mảng
  * 1. To String: chuyển sang KLD chuỗi
  * 2. Join: chuyển thành một chuỗi
- * 3.
+ * 3. Pop: Xóa đi phần tử cuối cùng và trả về pt đó
+ * 4. Push: thêm 1 / nhiều pt vào cuối mảng.Trả về số pt trong mảng mới
+ * 5. Shift: Xóa pt ở đầu mảng và trả về pt đã xóa. Trả về
+ * undefined khi đã xóa hết các pt trong mảng.
+ * 6. Unshift: Thêm 1/nhiều phần tử đầu mảng và trả về độ dài
+ * mới của màng
+ * 7. Splicing: Xóa / chèn 1 pt trong mảng
+ * *Xóa: vd: languages.splice(1,1)
+ * *Chèn: languages.splice(1,0,'Dart')
+ * 8. Concat: Dùng để nối mảng.
+ * 9. Slicing: Cắt 1 / toàn bộ element
  */
 
-console.log(languages.toString());
+// nó chỉ có thể xóa được đến hết mảng, nếu hơn nữa thì nó vẫn trả về 
+// số lương đã xóa từ vị trí xóa đến hết mảng
+
+/**
+ * Function
+ * 1: Hàm?
+ *  là một khối mã
+ * làm 1 việc cụ thể
+ * 2. Loại hàm
+ * -Built-in
+ * - Tự định nghĩa
+ * 3. Tính chất
+ * -Không thực thi khi định nghĩa
+ * - Sẽ thực thi khi được gọi
+ * - Có thể nhận tham sô
+ * -Có thể trả về 1 giá trị
+ * 4.Tạo hàm 
+ */
+
+function showDiaLog() {
+    alert('hi xin chào các bạn');
+}
+
+
+showDiaLog();
