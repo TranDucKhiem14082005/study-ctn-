@@ -402,28 +402,28 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // Array có thể chứa tất cả các KDL trong JavaScript
 // KDL của Array là Object 
-var languages = [
-    'JavaScript',
-    'PHP',
-    'Ruby',
-    'Python',
-];
+// var languages = [
+//     'JavaScript',
+//     'PHP',
+//     'Ruby',
+//     'Python',
+// ];
 
-var languages1 = [
-    'Java'
-]
+// var languages1 = [
+//     'Java'
+// ]
 
-console.log(languages.toString());
-console.log(languages.join());
-console.log(languages.pop());
-console.log(languages.push('world'));
-console.log(languages.shift());
-console.log(languages.unshift('Dart'));
-console.log(languages);
-console.log(languages.splice(1,2));
-console.log(languages.splice(1,0,'Hello')); //Chèn
-console.log(languages.concat(languages1));
-console.log(languages.slice(0,1));
+// console.log(languages.toString());
+// console.log(languages.join());
+// console.log(languages.pop());
+// console.log(languages.push('world'));
+// console.log(languages.shift());
+// console.log(languages.unshift('Dart'));
+// console.log(languages);
+// console.log(languages.splice(1,2));
+// console.log(languages.splice(1,0,'Hello')); //Chèn
+// console.log(languages.concat(languages1));
+// console.log(languages.slice(0,1));
 
 // // Cách kiểm tra một cái có phải là Array hay không
 // console.log(Array.isArray([]));
@@ -469,12 +469,12 @@ console.log(languages.slice(0,1));
  * 4.Tạo hàm 
  */
 
-function showDiaLog() {
-    alert('hi xin chào các bạn');
-}
+// function showDiaLog() {
+//     alert('hi xin chào các bạn');
+// }
 
 
-showDiaLog();
+// showDiaLog();
 
 // Tham số hàm 
 /*
@@ -503,21 +503,218 @@ showDiaLog();
     - giới thiệu vòng lặp For of
 */
 
-function writelog(message) {
-    console.log(message);
-    //when it in the function so it call name is: tham số
+// function writelog(message) {
+//     console.log(message);
+//     //when it in the function so it call name is: tham số
 
-}
+// }
 
-writelog('Test message'); //when it out function so it called name: đối số
+// writelog('Test message'); //when it out function so it called name: đối số
 
 
 // return trong hàm JS
 // trong một hàm  mà không trả về thì nó sẽ trả về undefined
 // trong hàm sẽ trả về bất kì kiểu dữ liệu nào
-function cong(a, b) {
-    a+b;
+// function cong(a, b) {
+//     a+b;
+// }
+
+// var result = cong(4,5)
+// console.log(result);
+
+/**
+ * Một số điều cần biết về function
+ * 1. Khi function đặt trùng tên?
+ * 2. Khai báo biến trong hàm?
+ * 3. Định nghĩa hàm trong hàm?
+ * 
+ */
+
+// 1. Khi function đặt trùng tên?
+// Khi mình định nghĩa ra hai function trùng tên
+//function định nghĩa sau sẽ ghi đè lên function định nghĩa trước
+// function showMessage() {
+//     console.log('messgae1');
+// }
+// function showMessage() {
+//     console.log('messgae2');
+// }
+
+// showMessage();
+
+//2. Khai báo biến trong hàm?
+// => có
+
+// function showMessage() {
+//     var fullName = 'Khiem Tran';
+//     //pham vi hoat dong trong function: bien cuc bo
+//     console.log(fullName);
+// }
+
+// showMessage();
+
+// 3. Định nghĩa hàm trong hàm?
+// => Có
+
+// function showMessage() {
+//     function showMessage2() {
+//         console.log('Message 2');
+//     }
+//     showMessage2();
+// }
+
+// showMessage();
+
+// ====================================================================== //
+
+// Review knowledge
+
+// alert('xin chao moi nguoi')
+// confirm('hello mn')
+// console.log(confirm('hello'))
+// console.log(prompt('ban hay nhap so tuoi cua minh'));
+
+var a = 2;
+var b = 1;
+//setTimeout: nó sẽ thực thi khối code khi qua một khoản thời gian nào đó
+// mà chúng ta sẽ set cho nó
+// setTimeout (
+//     function showMessage() {
+//         console.log('this is message');
+//     }
+// ,2000)
+
+// //SetInterval: nó sẽ thực thi liên tục sau một khoảng thời gian nào đó
+// setInterval (function total() {
+//     var result = a + b;
+//     console.log(result + Math.random());
+// },1000)
+
+
+// var a = 9;
+// var b = a--;
+
+// console.log(b);//return về biến copy nếu là hậu tố.
+// console.log(a);
+
+// // Câu điều kiện If - else
+// a = 2;
+// b = 2;
+// if(null){
+//     console.log('điều kiện đúng');
+// } else {
+//     console.log('điều kiện sai');
+// }
+//Câu điều kiện. Nếu ngoài 6 giá trị này thì kết quả luôn đúng.
+/**
+ * 1. 0
+ * 2. false
+ * 3. NaN
+ * 4. undefined
+ * 5."" or ''
+ * 6. Null
+ */
+
+//Toán sử so sánh === or !== : toán tử so sánh tuyệt đôi
+
+//====================================================//
+
+//Làm việc với chuỗi
+// var fullName = '      Im Khiêm      ';
+// console.log(fullName.length);
+
+// console.log(fullName.indexOf('m',3)); //nếu truyền vào một giá trị kh đúng trả về -1
+
+// console.log(fullName.search('khiem')); //Trả về vị trí đầu của từ
+
+// console.log(fullName.slice(2));// Cắt chuổi
+
+// console.log(fullName.split(' ')); //Chuyển chuỗi thành mảng
+
+// console.log(fullName.replace('Im','I am')); //Ghi đè chữ
+// // Nếu chúng ta truyền vào sai giá trị thì nó sẽ trả về đúng cái chuỗi ban đầu
+
+// console.log(fullName.repeat(3,3)); //Lặp lại từ vị trí nào, và giá trị ở sau là số lần lặp
+
+// console.log(fullName.trim()); // Chuẩn hóa chuỗi đầu cuối
+
+// console.log(fullName.toUpperCase());
+// console.log(fullName.toLowerCase());
+
+// console.log(fullName.charAt(4)); // lấy một giá trị khi đã biết vị trí
+
+// //====================================================//
+// /**
+//  * Làm việc với kiểu số
+//  * 1. To String: chuyển về KDL String
+//  * 2. To Fixed: làm tròn số
+//  */
+
+// var soTaiKhoan = 1312321312;
+// var soTienDU = 3.1312513512312;
+
+// console.log(typeof soTaiKhoan.toString());
+
+// console.log(soTienDU.toFixed(3)); 
+
+//====================================================//
+
+//Array
+
+// var languages = [
+//     'JavaScript',
+//     'Dart',
+// ]
+
+// var languages2 = [
+//     'Python',
+//     'Java'
+// ]
+
+// console.log(typeof languages); // KDL: Object
+
+// console.log(languages.length); // do dai chuoi
+
+// console.log(languages.concat(languages2)); //Nối 2 mảng lại với nhau
+
+// console.log(languages.toString()); // Chuyển mảng về kdl String
+
+// console.log(languages.join());// chuyển mang về dạng chuỗi
+
+// console.log(languages.shift()); // xóa phần tử đầu mảng
+// console.log(languages.pop()); //Xóa phần tử cuối mảng
+// console.log(languages.unshift('Ruby','Dart')); //Thêm phần tử đầu mảng và trả về độ dài của mảng
+// console.log(languages);
+
+// console.log(languages.push('hello')); // Thêm phần tử cuối mảng và trả về độ dài của mảng
+// console.log(languages);
+
+// console.log(languages.slice(1,4)); // Nếu nhập ngoài số phần tử của mảng thì nó sẽ trả về cái mảng rỗng
+
+//========================================================//
+//Function in JavaScript (JS)
+
+function Tong(a,b) { //Tham số
+    return a + b;
 }
 
-var result = cong(4,5)
+var result = Tong(4,5); // Đối số
 console.log(result);
+
+//Các loại hàm trong JS:
+
+//Declaration function: Có thể gọi khi định nghĩa hàm
+function showLog(message) {
+    console.log(message);
+}
+
+showLog('hello ae ')
+
+
+// Expression function
+
+var showLog2 = function(message2) {
+    console.log(message2);
+}
+
+showLog2();//nếu không truyền gì vào sẽ trả về undefined
