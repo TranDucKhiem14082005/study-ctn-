@@ -475,3 +475,49 @@ function showDiaLog() {
 
 
 showDiaLog();
+
+// Tham số hàm 
+/*
+1. Tham số?
+    - Định nghĩa?
+     là một giá trị truyền vào khi gọi một func, dùng để tính toán hay xử lý dữ liệu
+   
+     - Kiểu dữ liệu?: Có thể tạo nhiều kiểu dữ liệu trong hàm. Không giới hạn.
+   
+     - Tính private?: tham số có tính cục bộ, sử dụng trong hàm
+   
+     - 1 tham số 
+    
+     - Nhiều tham số
+     -- Nếu mình truyền vào 2 tham số nhưng chỉ sd 1 tham số thì nó 
+     sẽ trả về undefined
+
+2. Truyền tham số
+    -  1 tham số
+    
+    -  Nhiều tham số
+
+3. Arguments?
+
+    - Đối tượng Arguments
+    - giới thiệu vòng lặp For of
+*/
+
+function writelog(message) {
+    console.log(message);
+    //when it in the function so it call name is: tham số
+
+}
+
+writelog('Test message'); //when it out function so it called name: đối số
+
+
+// return trong hàm JS
+// trong một hàm  mà không trả về thì nó sẽ trả về undefined
+// trong hàm sẽ trả về bất kì kiểu dữ liệu nào
+function cong(a, b) {
+    a+b;
+}
+
+var result = cong(4,5)
+console.log(result);
