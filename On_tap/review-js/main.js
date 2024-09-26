@@ -803,12 +803,44 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // // console.log(courses[newName]); => lay value thong qua mot bien khac
 // // delete courses.name; => Xoa mot cap key va value
 // // console.log(courses);
+// var myEmail = 'email';
+// var myInfo = {
+//     name: 'Khiem Tran',
+//     age: 19,
+//     getAge: function() {
+//         return this.age;
+//     }
+// }
+// console.log(myInfo);
+// myInfo[myEmail] = 'khiemtran@gmail.com'
+// myInfo.address = 'Nha trang';
+// console.log(myInfo);
+// myInfo.phone = 3123125324;
+// console.log(myInfo);
+
+// // delete myInfo.age;
+// // console.log(myInfo);
+
+// console.log(myInfo.name);
+// console.log(myInfo['name']);
+// console.log(myInfo.getAge());
+
+/**Object contructor in JavaScript : Xây dựng đối tượng
+ * Chữ cái đầu viết hoa
+ */
+
+function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+
+    this.getName = function() {
+        return `${this.firstName} ${this.lastName}`
+    }
+}
 
 
-// let name = "John";
-// let age = 25;
-// let isStudent = true;
-
-// console.log("Name: " + name);
-// console.log("Age: " + age);
-// console.log("Is a student: " + isStudent);
+var author = new User('Khiem','Tran','Avatar');
+var user = new User('Linh','Tran','Avatar');
+console.log(author.getName());
+console.log(user.getName());
