@@ -574,8 +574,8 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // console.log(confirm('hello'))
 // console.log(prompt('ban hay nhap so tuoi cua minh'));
 
-var a = 2;
-var b = 1;
+// var a = 2;
+// var b = 1;
 //setTimeout: nó sẽ thực thi khối code khi qua một khoản thời gian nào đó
 // mà chúng ta sẽ set cho nó
 // setTimeout (
@@ -694,27 +694,121 @@ var b = 1;
 //========================================================//
 //Function in JavaScript (JS)
 
-function Tong(a,b) { //Tham số
-    return a + b;
-}
+// function Tong(a,b) { //Tham số
+//     return a + b;
+// }
 
-var result = Tong(4,5); // Đối số
-console.log(result);
+// var result = Tong(4,5); // Đối số
+// console.log(result);
 
-//Các loại hàm trong JS:
+// //Các loại hàm trong JS:
 
-//Declaration function: Có thể gọi khi định nghĩa hàm
-function showLog(message) {
-    console.log(message);
-}
+// //Declaration function: Có thể gọi khi định nghĩa hàm
+// function showLog(message) {
+//     console.log(message);
+// }
 
-showLog('hello ae ')
+// showLog('hello ae ')
 
 
-// Expression function
+// // Expression function
 
-var showLog2 = function(message2) {
-    console.log(message2);
-}
+// var showLog2 = function(message2) {
+//     console.log(message2);
+// }
 
-showLog2();//nếu không truyền gì vào sẽ trả về undefined
+// showLog2();//nếu không truyền gì vào sẽ trả về undefineda
+
+// setTimeout( function() {
+
+// });
+
+// var myObject = {
+//     myfunction: function() {
+
+//     }
+// }
+
+//hosting: 
+
+// Arrow function
+
+//=======================================================//
+/*
+    Polyfill? 
+*/
+
+
+// =================================== //
+
+/**
+ * Object: lưu trữ thông tin của một đối tượng cụ thể.
+ */
+
+// var myPhone = 'phone'
+
+// var myInfo = {
+//     //Có thể biến key thành một chuỗi
+//     name: 'Khiem',
+//     age: 19,
+//     address: 'Nha Trang',
+//     [myPhone]: 0388312313,
+//     getName: function() {
+//         return this.name;
+//     }
+    
+
+// }
+// console.log(myInfo.getName());
+// //Thêm key và value nữa sau khi object đã được tạo.
+// myInfo.email = 'khiemtran015@gmail.com';
+// //cach 2
+// myInfo['my-email']  = 'Khiem@gmail.com';
+
+// console.log(myInfo);
+
+// var myKey = 'age';
+// //Cách để lấy value ra ngoài
+// console.log(myInfo.name); // cách 1
+
+// console.log(myInfo['my-name']); // nếu mình truyền vào key không có thì trả về undefined
+
+// //Cách lấy một value thong qua một biến bên ngoài
+// console.log(myInfo[myKey]);
+
+// //Cách xóa một cặp key và value
+// delete myInfo.age;
+// console.log(myInfo);
+
+//Trường hợp là một function ==>> Phương thước / method
+//Others =>> Thuộc tính / Property
+
+// var newName = 'name';
+
+// var courses = {
+//     name: 'JavaScript',
+//     price: 1200,
+//     time: 3,
+//     getPrice: function() {
+//         return this.price;
+//     }
+// }
+
+// console.log(courses.getPrice());
+
+// courses.address = 'khiemtran@gmail.com'
+// // console.log(courses.name); => lay value
+// // console.log(courses['price']); => Lay value
+// // console.log(courses); 
+// // console.log(courses[newName]); => lay value thong qua mot bien khac
+// // delete courses.name; => Xoa mot cap key va value
+// // console.log(courses);
+
+
+// let name = "John";
+// let age = 25;
+// let isStudent = true;
+
+// console.log("Name: " + name);
+// console.log("Age: " + age);
+// console.log("Is a student: " + isStudent);
