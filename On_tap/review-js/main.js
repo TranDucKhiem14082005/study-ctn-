@@ -829,18 +829,160 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
  * Chữ cái đầu viết hoa
  */
 
-function User(firstName, lastName, avatar) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.avatar = avatar;
+// function User(firstName, lastName, avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
 
-    this.getName = function() {
-        return `${this.firstName} ${this.lastName}`
-    }
+//     this.getName = function() {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }
+
+
+// var author = new User('Khiem','Tran','Avatar');
+// var user = new User('Linh','Tran','Avatar');
+// console.log(author.getName());
+// console.log(user.getName());
+
+
+// function Oto(brand,price,years){
+//     this.brand = brand;
+//     this.price = price;
+//     this.years = years;
+//     this.getBrand = function() {
+//         return this.brand;
+//     }
+// }
+
+// var ferrari = new Oto('Ferrari','1200000','2024');
+// var honda = new Oto('HonDa','10000','2024');
+
+// //Nếu chúng ta thêm một key và value mới trên một object thì sẽ bị lỗi
+// ferrari.vip = 'limit on the world';
+// honda.limit = 'this is has 1000 car on the world';
+
+
+// console.log(ferrari.getBrand());
+// console.log(honda.getBrand());
+
+
+// function User(firstName,lastName,avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
+//     this.getName = function() { //muon lay ve full name cua doi tuong
+//         return `${firstName} ${lastName}`;
+//     }
+// }
+
+// var author  = new User('Khiem','Tran','Avatar');
+// var user  = new User('Linh','Tran','Avatar');
+
+// author.title = 'Hello moi nguoi';
+// user.comment = 'Em chao anh, khong biet hom nay anh se day cai gi';
+
+// console.log(author.getName());
+// console.log(user.getName());
+
+
+// ========================================= //
+/*
+    Object prototype: Nguyên liệu  - Basci
+
+    1.What is Prototype? => Nguyên mẫu/ Khuôn
+    2. when we use it? =>
+*/
+
+// function User(firstName,lastName,avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
+// }
+
+// //Su dung Prototype
+// User.prototype.className = 'KhiemTran';
+// User.prototype.getClassName = function() {
+//     return this.className;
+// }
+// var author = new User('Khiem','Tran','Avatar');
+// var user = new User('Linh','Tran','Avatar');
+
+// console.log(author);
+// console.log(user);
+
+
+// //Đối tượng Date => lấy ra giá trị thời gian
+// var date = new Date();
+
+// var year = date.getFullYear();
+// var month = date.getMonth() + 1;
+// var day = date.getDate();
+// var thu = date.getDay() + 1;
+// //Get day la lay ra so ngay trong tuan va chay tu 0->6
+// console.log(date);
+// console.log(`Thứ ${thu} Ngày ${day} Tháng ${month} Năm ${year}`);
+
+
+// ============================================= //
+
+// Cây lệnh rẽ nhánh - If else
+
+// var date = 4;
+
+// if (date === 2) {
+//     console.log('Hôm nay là thứ 2');
+// }else if (date === 3) {
+//     console.log('Hôm nay là thứ 3');
+// }else if (date === 4) {
+//     console.log('Hôm nay là thứ 4');
+// } else {
+//     console.log('Vui lòng nhập lại, bạn đã nhập sai dữ liệu');
+// }
+
+
+// // Câu lệnh rẽ nhánh - Switch
+// var date = 3;
+// /*
+//     Chú ý: Khi mà một case nào đó đúng thì những case bên dưới nó đều
+//     đúng, nếu mình không sd câu lệnh break để thoát ra thì nó sẽ thực
+//     thi các câu lệnh bên dưới.
+// */
+// switch(date) {
+//     case 2:
+//         console.log('Thu 2');
+//         break;
+//     case 3:
+//         console.log('Thu 3');
+//         break;
+//     case 4:
+//         console.log('Thu 4');
+//         break;
+//     case 5:
+//         console.log('Thu 5');
+//         break;
+//     default:
+//         console.log('Sai du lieu');                  
+// }
+
+
+// Toán tử 3 ngôi - Ternary operator
+
+var courses = {
+    name: 'JavaScript',
+    coin: 250
 }
 
+// if (courses.coin > 0) {
+//     console.log(`${courses.coin} Coin`);
+// } else {
+//     console.log('Free');
+// }
 
-var author = new User('Khiem','Tran','Avatar');
-var user = new User('Linh','Tran','Avatar');
-console.log(author.getName());
-console.log(user.getName());
+var result = courses.coin > 0 ? `${courses.coin} Coin` : 'Free'; 
+console.log(result);
+
+var a = 3;
+var b = 4;
+var c = a > b ? a : b;
+console.log(c);
