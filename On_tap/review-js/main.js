@@ -968,21 +968,105 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // Toán tử 3 ngôi - Ternary operator
 
-var courses = {
-    name: 'JavaScript',
-    coin: 250
-}
-
-// if (courses.coin > 0) {
-//     console.log(`${courses.coin} Coin`);
-// } else {
-//     console.log('Free');
+// var courses = {
+//     name: 'JavaScript',
+//     coin: 250
 // }
 
-var result = courses.coin > 0 ? `${courses.coin} Coin` : 'Free'; 
-console.log(result);
+// // if (courses.coin > 0) {
+// //     console.log(`${courses.coin} Coin`);
+// // } else {
+// //     console.log('Free');
+// // }
 
-var a = 3;
-var b = 4;
-var c = a > b ? a : b;
-console.log(c);
+// var result = courses.coin > 0 ? `${courses.coin} Coin` : 'Free'; 
+// console.log(result);
+
+// var a = 3;
+// var b = 4;
+// var c = a > b ? a : b;
+// console.log(c);
+
+
+// ======================================= //
+
+/*
+    Vòng lặp: FOR
+*/
+var myArray = [
+    'JavaScript',
+    'PHP',
+    'Java'
+]
+
+
+//cach lay mot gia tri trong mang ra
+var arrayLength = myArray.length; // Viet nhu nay se toi uu hon
+for (var i = 0; i < arrayLength; i++) {
+    console.log(myArray[i]);
+}
+
+//For/in loop : Dùng nó để lấy những key của đối tượng.
+
+//Object
+var myInfo = {
+    name: "Khiem Tran",
+    age: 19,
+}
+
+for (var key in myInfo) {
+    console.log(myInfo[key]);
+}
+
+//Mang
+var languages = [
+    'JavaScript',
+    'PHP',
+    'Dart'
+]
+
+for (var key in languages) {
+    console.log(languages[key]);
+}
+
+//Chuoi
+var myString = 'JavaScript';
+for (var key in myString) {
+    console.log(myString[key]);
+}
+
+//For/of loop
+// Muon lay ra cac phan tu cua mang / lay tung chu cai cua chuoi
+
+var languages = [
+    'JavaScript',
+    'PHP'
+]
+
+for (var value of languages) {
+    console.log(value);
+}
+
+//Chuoi
+
+var myLanguage = 'JavaScript';
+for (var value of myLanguage) {
+    console.log(value);
+}
+
+//Object => khong phai la mot doi tuong co the dung for/of de lap
+
+var myInfo = {
+    name: 'Khiem Tran',
+    age: 19,
+}
+console.log(Object.keys(myInfo)); // lap qua cac key
+for (var value of Object.keys(myInfo)) { // sd key de lay value
+    console.log(myInfo[value]);
+}
+
+console.log(Object.values(myInfo));
+
+for( var value of Object.values(myInfo)) {
+    console.log(myInfo);
+}
