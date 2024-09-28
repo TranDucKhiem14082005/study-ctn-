@@ -993,80 +993,273 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 /*
     Vòng lặp: FOR
 */
-var myArray = [
-    'JavaScript',
-    'PHP',
-    'Java'
-]
+// var myArray = [
+//     'JavaScript',
+//     'PHP',
+//     'Java'
+// ]
 
 
-//cach lay mot gia tri trong mang ra
-var arrayLength = myArray.length; // Viet nhu nay se toi uu hon
-for (var i = 0; i < arrayLength; i++) {
-    console.log(myArray[i]);
-}
+// //cach lay mot gia tri trong mang ra
+// var arrayLength = myArray.length; // Viet nhu nay se toi uu hon
+// for (var i = 0; i < arrayLength; i++) {
+//     console.log(myArray[i]);
+// }
 
-//For/in loop : Dùng nó để lấy những key của đối tượng.
+// //For/in loop : Dùng nó để lấy những key của đối tượng.
 
-//Object
-var myInfo = {
-    name: "Khiem Tran",
-    age: 19,
-}
+// //Object
+// var myInfo = {
+//     name: "Khiem Tran",
+//     age: 19,
+// }
 
-for (var key in myInfo) {
-    console.log(myInfo[key]);
-}
+// for (var key in myInfo) {
+//     console.log(myInfo[key]);
+// }
 
-//Mang
-var languages = [
-    'JavaScript',
-    'PHP',
-    'Dart'
-]
+// //Mang
+// var languages = [
+//     'JavaScript',
+//     'PHP',
+//     'Dart'
+// ]
 
-for (var key in languages) {
-    console.log(languages[key]);
-}
+// for (var key in languages) {
+//     console.log(languages[key]);
+// }
 
-//Chuoi
-var myString = 'JavaScript';
-for (var key in myString) {
-    console.log(myString[key]);
-}
+// //Chuoi
+// var myString = 'JavaScript';
+// for (var key in myString) {
+//     console.log(myString[key]);
+// }
 
-//For/of loop
-// Muon lay ra cac phan tu cua mang / lay tung chu cai cua chuoi
+// //For/of loop
+// // Muon lay ra cac phan tu cua mang / lay tung chu cai cua chuoi
 
-var languages = [
-    'JavaScript',
-    'PHP'
-]
+// var languages = [
+//     'JavaScript',
+//     'PHP'
+// ]
 
-for (var value of languages) {
-    console.log(value);
-}
+// for (var value of languages) {
+//     console.log(value);
+// }
 
-//Chuoi
+// //Chuoi
 
-var myLanguage = 'JavaScript';
-for (var value of myLanguage) {
-    console.log(value);
-}
+// var myLanguage = 'JavaScript';
+// for (var value of myLanguage) {
+//     console.log(value);
+// }
 
-//Object => khong phai la mot doi tuong co the dung for/of de lap
+// //Object => khong phai la mot doi tuong co the dung for/of de lap
 
-var myInfo = {
-    name: 'Khiem Tran',
-    age: 19,
-}
-console.log(Object.keys(myInfo)); // lap qua cac key
-for (var value of Object.keys(myInfo)) { // sd key de lay value
-    console.log(myInfo[value]);
-}
+// var myInfo = {
+//     name: 'Khiem Tran',
+//     age: 19,
+// }
+// console.log(Object.keys(myInfo)); // lap qua cac key
+// for (var value of Object.keys(myInfo)) { // sd key de lay value
+//     console.log(myInfo[value]);
+// }
 
-console.log(Object.values(myInfo));
+// console.log(Object.values(myInfo));
 
-for( var value of Object.values(myInfo)) {
-    console.log(myInfo);
-}
+// for( var value of Object.values(myInfo)) {
+//     console.log(myInfo);
+// }
+
+// // For/in
+
+// var languages = [
+//     'JavaScript',
+//     'PHP'
+// ]
+
+// for (var key in languages){
+
+//     console.log(languages[key]);
+// }
+
+// var myInfo = {
+//     name: 'Khiem Tran',
+//     age: 19
+// }
+
+// for(var key in myInfo) {
+//     console.log(myInfo[key]);
+// }
+
+
+// // For / of
+
+// var languages = [
+//     'JS',
+//     'Java',
+//     'Python'
+// ]
+
+// for(var value of languages) {
+//     console.log(value);
+// }
+
+// var myInfo = {
+//     name: "Linh Tran",
+//     age: 15
+// }
+// // For/of khong cho lay gia tri ra tu Object,
+// //vi the chung ta se su dung Object.values(ten Object) de lay value
+// for(var value of Object.values(myInfo)) { 
+//     console.log(value);
+// }
+
+//Vong lap While
+//in ra gia tri so tu 1 -> 1000
+// var i = 0;
+// while (i < 1000) {
+//     i++;
+//     console.log(i);
+// }
+
+// var myArray = [
+//     'JS',
+//     'PHP'
+// ]
+
+// var i  = 0;
+// while (i<myArray.length) {
+//     console.log(myArray[i]);
+//     i++;
+// }
+
+// // Do/While loop
+// // ra mot day so tang dan tu 1 den 10
+
+// var i = 0;
+
+// var isSuccess = false;
+
+// do {
+//     i++;
+//     console.log('Nap the lan ' + i);
+//     if(true) {
+//         isSuccess = true;
+//     }
+// }while(!isSuccess && i <= 3)
+
+
+// // Vong lap long nhau
+// var myArray = [
+//     [1, 2],
+//     [3, 4],
+//     [5, 6]
+// ]
+
+// for ( var i = 0; i < myArray.length;i++) { // chay tung mang con
+//     for(var j = 0; j<myArray[i].length; j++) {// chay tung phan tu cua mang con
+//         console.log(myArray[i][j]);
+//     }
+// }
+
+// // vd mo rong ve vong lap
+
+// for(var i = 100; i > 0; --i) {
+//     console.log(i);
+// }
+
+// for (var i = 0; i<= 100;i+=5){
+//     console.log(i);
+// }
+
+// for (var i = 100; i >= 0; i-=5){
+//     console.log(i);
+// }
+
+
+// ======================================================= //
+
+// Lam viec voi mang trong JavaScript | Array methods (Phan 2)
+
+/*
+    Array methods:
+        forEach(): Duyet qua tung phan tu cua mang
+        every(): Duyet qua het tat ca cac phan tu cua mang va tat ca cac pt deu dung
+        some(): Tra ve phan tu va index: Duyet qua het tat ca cac pt cua mang va giong nhu Toan tu SS Or
+        find()
+        filter()
+        map()
+        reduce()
+ */
+
+var courses = [
+    {
+        id: 1,
+        name: 'JavaScript',
+        coin: 250
+    },
+    {
+        id: 2,
+        name: 'Java',
+        coin: 400
+    },
+    {
+        id: 3,
+        name: 'Python',
+        coin: 0
+    },
+    {
+        id: 4,
+        name: 'Ruby',
+        coin: 1000
+    },
+    {
+        id: 5,
+        name: 'C',
+        coin: 200
+    },
+    {
+        id: 6,
+        name: 'Dart',
+        coin: 200
+    }
+];
+
+//forEach // Duy qua tung phan tu cua mang
+
+courses.forEach(function(courses, index) { //TS1:tung phan tu cua mang
+    //TS2: tra ve chi muc cua mang
+    console.log(index, courses);
+});
+
+// Every: Tat ca phai deu dung
+
+// var isFree = courses.every(function() {
+//     return courses.coin === 0;
+// });
+
+// console.log(isFree);
+
+var isFree = courses.some(function(courses, index) {
+    return courses.coin === 0;
+});
+
+console.log(isFree);    
+
+
+// Find: Chi tim duoc mot doi tuong
+
+var course = courses.find(function(course, index) {
+    return course.name === 'Java';
+})
+
+console.log(course);
+
+//Filter: Tra ve cac phan tu thoa man dieu kien
+
+var course = courses.filter(function(course, index) {
+    return course.coin === 200;
+});
+ 
+console.log(course);
