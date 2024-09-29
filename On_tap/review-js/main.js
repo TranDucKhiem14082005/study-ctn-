@@ -1193,73 +1193,115 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
         reduce()
  */
 
+// var courses = [
+//     {
+//         id: 1,
+//         name: 'JavaScript',
+//         coin: 250
+//     },
+//     {
+//         id: 2,
+//         name: 'Java',
+//         coin: 400
+//     },
+//     {
+//         id: 3,
+//         name: 'Python',
+//         coin: 0
+//     },
+//     {
+//         id: 4,
+//         name: 'Ruby',
+//         coin: 1000
+//     },
+//     {
+//         id: 5,
+//         name: 'C',
+//         coin: 200
+//     },
+//     {
+//         id: 6,
+//         name: 'Dart',
+//         coin: 200
+//     }
+// ];
+
+// //forEach // Duy qua tung phan tu cua mang
+
+// courses.forEach(function(courses, index) { //TS1:tung phan tu cua mang
+//     //TS2: tra ve chi muc cua mang
+//     console.log(index, courses);
+// });
+
+// // Every: Tat ca phai deu dung
+
+// // var isFree = courses.every(function() {
+// //     return courses.coin === 0;
+// // });
+
+// // console.log(isFree);
+
+// var isFree = courses.some(function(courses, index) {
+//     return courses.coin === 0;
+// });
+
+// console.log(isFree);    
+
+
+// // Find: Chi tim duoc mot doi tuong
+
+// var course = courses.find(function(course, index) {
+//     return course.name === 'Java';
+// })
+
+// console.log(course);
+
+// //Filter: Tra ve tat ca cac phan tu thoa man dieu kien
+
+// var course = courses.filter(function(course, index) {
+//     return course.coin === 200;
+// });
+ 
+// console.log(course);
+
+// Array map method trong JavaScript: tra ve mot array
+
 var courses = [
     {
         id: 1,
         name: 'JavaScript',
-        coin: 250
-    },
-    {
-        id: 2,
-        name: 'Java',
-        coin: 400
-    },
-    {
-        id: 3,
-        name: 'Python',
         coin: 0
     },
     {
-        id: 4,
+        id: 2,
         name: 'Ruby',
-        coin: 1000
+        coin: 2
     },
     {
-        id: 5,
-        name: 'C',
-        coin: 200
-    },
-    {
-        id: 6,
+        id: 3,
         name: 'Dart',
-        coin: 200
+        coin: 6
+    },
+    {
+        id: 4,
+        name: 'PHP',
+        coin: 9
+    },
+]
+
+function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
+    //thi no se tra ve dung cai ma minh return
+    return {
+        id: course.id,
+        name: `Khoa hoc: ${course.name}`,
+        coin: course.coin,
+        coiText: `Gia: ${course.coin}`,
+        index: index,
+        originArray: originArray
     }
-];
+};
 
-//forEach // Duy qua tung phan tu cua mang
-
-courses.forEach(function(courses, index) { //TS1:tung phan tu cua mang
-    //TS2: tra ve chi muc cua mang
-    console.log(index, courses);
-});
-
-// Every: Tat ca phai deu dung
-
-// var isFree = courses.every(function() {
-//     return courses.coin === 0;
-// });
-
-// console.log(isFree);
-
-var isFree = courses.some(function(courses, index) {
-    return courses.coin === 0;
-});
-
-console.log(isFree);    
+var newCourses = courses.map(courseHandler);
 
 
-// Find: Chi tim duoc mot doi tuong
-
-var course = courses.find(function(course, index) {
-    return course.name === 'Java';
-})
-
-console.log(course);
-
-//Filter: Tra ve cac phan tu thoa man dieu kien
-
-var course = courses.filter(function(course, index) {
-    return course.coin === 200;
-});
- 
-console.log(course);
+console.log(newCourses);
