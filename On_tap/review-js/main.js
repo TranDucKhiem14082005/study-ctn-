@@ -1193,6 +1193,7 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
         reduce()
  */
 
+
 // var courses = [
 //     {
 //         id: 1,
@@ -1226,7 +1227,36 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 //     }
 // ];
 
-// //forEach // Duy qua tung phan tu cua mang
+
+// courses.forEach(function(course,index) {
+//     console.log(course); //duyet qua tung phan tu cua mang
+// })
+
+// var priceCourse = courses.every(function(course,index) {
+//     return course.coin === 200; // duyet qua tat ca phan tu, va phai deu dung
+// })
+
+// console.log(priceCourse);
+
+// var isFree = courses.some(function(course,index) {
+//     return course.coin === 0; // duyet qua tat ca cac pt va sd toan tu OR de so sanh
+// })
+
+// console.log(isFree);
+
+
+// var haveJava = courses.find(function(course,index) {
+//     return course.name === 'Java'; //tim kiem mot duy nhat
+// })
+// console.log(haveJava);
+
+// var course = courses.filter(function(course, index) {
+//     return course.coin === 200; //Tra ve nhung thang thoa dieu kien
+// })
+
+// console.log(course);
+
+// //forEach // Duyet qua tung phan tu cua mang
 
 // courses.forEach(function(courses, index) { //TS1:tung phan tu cua mang
 //     //TS2: tra ve chi muc cua mang
@@ -1289,19 +1319,35 @@ var courses = [
     },
 ]
 
-function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
-    //thi no se tra ve dung cai ma minh return
+function courseHandler(course,index,originArray) {
     return {
         id: course.id,
         name: `Khoa hoc: ${course.name}`,
-        coin: course.coin,
-        coiText: `Gia: ${course.coin}`,
-        index: index,
-        originArray: originArray
+        coin: `Gia tien cua khoa hoc: ${course.coin}`,
+        coinText:`Gia: ${course.coin}`,
+        index: index
     }
-};
+}
 
 var newCourses = courses.map(courseHandler);
 
-
 console.log(newCourses);
+
+
+// function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
+//     //thi no se tra ve dung cai ma minh return
+//     return {
+//         id: course.id,
+//         name: `Khoa hoc: ${course.name}`,
+//         coin: course.coin,
+//         coiText: `Gia: ${course.coin}`,
+//         index: index,
+//         originArray: originArray
+//     }
+// };
+
+// var newCourses = courses.map(courseHandler);
+// console.log(newCourses);
+
+//Reduce: muon nhan ve mot phan tu duy nhat khi chung ta tinh toan trong mot array
+//=> neu khong dung reduce thi dung vong lap
