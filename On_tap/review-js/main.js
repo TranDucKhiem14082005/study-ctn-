@@ -1300,38 +1300,38 @@ var courses = [
     {
         id: 1,
         name: 'JavaScript',
-        coin: 0
+        coin: 100
     },
     {
         id: 2,
         name: 'Ruby',
-        coin: 2
+        coin: 230
     },
     {
         id: 3,
         name: 'Dart',
-        coin: 6
+        coin: 612
     },
     {
         id: 4,
         name: 'PHP',
-        coin: 9
+        coin: 900
     },
 ]
 
-function courseHandler(course,index,originArray) {
-    return {
-        id: course.id,
-        name: `Khoa hoc: ${course.name}`,
-        coin: `Gia tien cua khoa hoc: ${course.coin}`,
-        coinText:`Gia: ${course.coin}`,
-        index: index
-    }
-}
+// function courseHandler(course,index,originArray) {
+//     return {
+//         id: course.id,
+//         name: `Khoa hoc: ${course.name}`,
+//         coin: `Gia tien cua khoa hoc: ${course.coin}`,
+//         coinText:`Gia: ${course.coin}`,
+//         index: index
+//     }
+// }
 
-var newCourses = courses.map(courseHandler);
+// var newCourses = courses.map(courseHandler);
 
-console.log(newCourses);
+// console.log(newCourses);
 
 
 // function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
@@ -1351,3 +1351,38 @@ console.log(newCourses);
 
 //Reduce: muon nhan ve mot phan tu duy nhat khi chung ta tinh toan trong mot array
 //=> neu khong dung reduce thi dung vong lap
+
+//1. Dễ hiểu: loop
+//2. Ngắn gọn: Array methods / reduce
+//3. Hiệu năng: loop
+
+
+// var totalCoin = 0;
+// for(var course of courses) {
+//     totalCoin += course.coin;
+// }
+// console.log(totalCoin);
+
+
+// REDUCE
+// Biến lưu trữ
+// Thực hiện việc lưu trữ
+
+//Khi không có giá trị khởi tạo thì nó sẽ lấy giá trị của pt đầu tiên
+// Khi mong muốn nhận được KLD là gì,giá trị gì thì hãy có giá trị khởi tạo.
+var i = 0;
+
+function coinHandler(accumulator,currentValue,currentIndex,originArray) {
+    i++; // Mỗi lần lặp qua thì các phần tử trong mảng được gọi lại
+    console.table({
+        'Lượt chạy: ': i,
+        'Biến tích trữ': accumulator,
+        'Giá trị hiện tại: ': currentValue.coin,
+        'Tổng thu được: ': currentValue.coin + accumulator
+    })
+
+    return currentValue.coin + accumulator;
+}
+
+var totalCoin = courses.reduce(coinHandler, 0); // 0: giá trị khởi tạo (gtri ban đầu)
+console.log(totalCoin);
