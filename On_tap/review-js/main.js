@@ -115,8 +115,15 @@ Toán tử so sánh
  * Toán tử logic
  * 1. && - And: all condition the true is true
  * 2. || - Or: one in all condition the true is true
- * 3. ! - Not
+ * 3. ! - Not: 
+ * 4. ??:       
  */
+
+// let glass = null;
+
+// let newGlass = glass ?? "water";
+
+// console.log(newGlass);
 
 // var a = 1;
 // var b = 3;
@@ -1296,42 +1303,42 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // Array map method trong JavaScript: tra ve mot array
 
-var courses = [
-    {
-        id: 1,
-        name: 'JavaScript',
-        coin: 100
-    },
-    {
-        id: 2,
-        name: 'Ruby',
-        coin: 230
-    },
-    {
-        id: 3,
-        name: 'Dart',
-        coin: 612
-    },
-    {
-        id: 4,
-        name: 'PHP',
-        coin: 900
-    },
-]
+// var courses = [
+//     {
+//         id: 1,
+//         name: 'JavaScript',
+//         coin: 100
+//     },
+//     {
+//         id: 2,
+//         name: 'Ruby',
+//         coin: 230
+//     },
+//     {
+//         id: 3,
+//         name: 'Dart',
+//         coin: 612
+//     },
+//     {
+//         id: 4,
+//         name: 'PHP',
+//         coin: 900
+//     },
+// ]
 
-function courseHandler(course,index,originArray) {
-    return {
-       id: course.id,
-       name: `Khoa hoc: ${course.name}`,
-       coin: `Gia tien khoa hoc: ${course.coin}`,
-       index: index,
-       originArray: originArray
-    }
-}
+// function courseHandler(course,index,originArray) {
+//     return {
+//        id: course.id,
+//        name: `Khoa hoc: ${course.name}`,
+//        coin: `Gia tien khoa hoc: ${course.coin}`,
+//        index: index,
+//        originArray: originArray
+//     }
+// }
 
-var newCourses = courses.map(courseHandler);
+// var newCourses = courses.map(courseHandler);
 
-console.log(newCourses);
+// console.log(newCourses);
 
 
 // function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
@@ -1412,7 +1419,7 @@ console.log(newCourses);
 //     return flatOutPut.concat(depthItem);
 // },[]);
 
-// console.log(flatArray);
+// console.log(flatArray);_
 
 // // 2. Lấy ra các khóa học đưa vào 1 mảng mới
 
@@ -1461,3 +1468,103 @@ console.log(newCourses);
 // })
 
 // console.log(html.join());
+
+
+// ==================== //
+
+// Phương thức includes : tồn tại trong prototype Array, String
+
+// console.log(Array.prototype.includes);
+
+// //Trong chuỗi: Dùng để kiểm tra xem 1 chuỗi có nằm trong 1 chuỗi hay không?
+// var title = 'Responsive web design';
+
+// console.log(title.includes('Responsive', 1)); 
+// // Đối số thứ 2 là: 1 Chỉ số để bắt đầu tìm kiếm
+
+// //Trong mang: Dùng để kiếm tra xem 1 pt có nằm trong mảng hay không?
+// var courses = ['JS','PHP'];
+
+// console.log(courses.includes('JS'));
+// Đối số thứ 2 là: Chỉ số để bắt đầu tìm kiếm
+
+// ==================================================== //
+/*
+//Đối tượng Math - JS math object
+
+1. Math.PI
+2. Math.round() => Làm tròn. >=5 -> trên / <5 -> dưới
+3. Math.abs() => Trị tuyệt đối
+4. Math.ceil() => Làm tròn trên
+5. Math.floor() => Làm tròn dưới
+6. Math.random() => Tạo một số thập phân ngẫu nhiên nhỏ hơn 1
+7. Math.min()
+8. Math.max()
+*/
+
+
+// console.log(Math.PI);
+// console.log(Math.round(1.345));
+// console.log(Math.abs(-8));
+// console.log(Math.ceil(-8,312312)); 
+// console.log(Math.floor(.3131));
+// console.log(Math.min(-8,5));
+// console.log(Math.max(-8,10));
+
+
+// ====================================== //
+
+/*
+
+-Callback?
+
++Là hàm (function) được truyền qua đối số khi gọi hàm khác gọi
+
+1. Là hàm
+2. Được truyền qua đối số
+3. Được gọi lại (trong hàm nhận đối số)
+
+// */
+
+// function myFunction(param) {
+//     if(typeof param === 'function'){
+//         param(12312);
+//     }
+// }
+
+// function myCallback(value) {
+//     console.log('Value: ',value);
+// }
+
+// myFunction(myCallback);
+
+// Callback - Phần 2?
+
+Array.prototype.map2 = function(callback) {
+
+    let output = [],  arrayLength = this.length;
+    for(var i = 0 ; i < arrayLength; i++) {
+       var result =  callback(this[i],i);
+       output.push(result)
+    }
+
+    return output
+}
+
+var courses = [
+    'JS',
+    'PHP',
+    'Ruby'
+]
+
+// courses.map(function(course) {
+//     console.log(course);
+// });
+
+let htmls = courses.map2(function(course, index) {
+    return `<h2>${course}</h2>`
+});
+
+console.log(htmls);
+console.log(htmls.join(''));
+
