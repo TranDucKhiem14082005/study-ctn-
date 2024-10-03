@@ -1319,19 +1319,19 @@ var courses = [
     },
 ]
 
-// function courseHandler(course,index,originArray) {
-//     return {
-//         id: course.id,
-//         name: `Khoa hoc: ${course.name}`,
-//         coin: `Gia tien cua khoa hoc: ${course.coin}`,
-//         coinText:`Gia: ${course.coin}`,
-//         index: index
-//     }
-// }
+function courseHandler(course,index,originArray) {
+    return {
+       id: course.id,
+       name: `Khoa hoc: ${course.name}`,
+       coin: `Gia tien khoa hoc: ${course.coin}`,
+       index: index,
+       originArray: originArray
+    }
+}
 
-// var newCourses = courses.map(courseHandler);
+var newCourses = courses.map(courseHandler);
 
-// console.log(newCourses);
+console.log(newCourses);
 
 
 // function courseHandler(course,index,originArray) { //index: key cua chung ta //return ve cai gi
@@ -1369,20 +1369,95 @@ var courses = [
 // Thực hiện việc lưu trữ
 
 //Khi không có giá trị khởi tạo thì nó sẽ lấy giá trị của pt đầu tiên
+
 // Khi mong muốn nhận được KLD là gì,giá trị gì thì hãy có giá trị khởi tạo.
-var i = 0;
+//nếu khi không đặt mà nó vẫn ra giá trị mà chúng ta muốn thì không cần truyền
 
-function coinHandler(accumulator,currentValue,currentIndex,originArray) {
-    i++; // Mỗi lần lặp qua thì các phần tử trong mảng được gọi lại
-    console.table({
-        'Lượt chạy: ': i,
-        'Biến tích trữ': accumulator,
-        'Giá trị hiện tại: ': currentValue.coin,
-        'Tổng thu được: ': currentValue.coin + accumulator
-    })
+//Giá trị khởi tạo không bắt buộc. Nhưng không phải bài toán nào cũng không khởi tạo
+//tùy vào trường họp thì chúng ta sẽ có những cách xử lý khác nhau
 
-    return currentValue.coin + accumulator;
-}
+// var i = 0;
 
-var totalCoin = courses.reduce(coinHandler, 0); // 0: giá trị khởi tạo (gtri ban đầu)
-console.log(totalCoin);
+// function coinHandler(accumulator,currentValue,currentIndex,originArray) {
+//     i++; // Mỗi lần lặp qua thì các phần tử trong mảng được gọi lại
+//     console.table({
+//         'Lượt chạy: ': i,
+//         'Biến tích trữ': accumulator,
+//         'Giá trị hiện tại: ': currentValue.coin,
+//         'Tổng thu được: ': currentValue.coin + accumulator
+//     })
+
+//     return currentValue.coin + accumulator;
+// }
+
+// var totalCoin = courses.reduce(coinHandler, 0); // 0: giá trị khởi tạo (gtri ban đầu)
+// console.log(totalCoin);
+
+
+// var numbers = [100, 230, 612, 900];
+
+// var totalCoin2 = numbers.reduce(function(total,number) {
+//     return total + number;
+// });
+
+// console.log(totalCoin2);
+
+//============ Bài tập ============
+
+// 1. Flat - "Làm phẳng" mảng từ Depth array - "Mảng sâu"
+
+// var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+
+// var flatArray = depthArray.reduce(function(flatOutPut,depthItem) {
+//     return flatOutPut.concat(depthItem);
+// },[]);
+
+// console.log(flatArray);
+
+// // 2. Lấy ra các khóa học đưa vào 1 mảng mới
+
+// var topics = [
+//     {
+//         topic: 'Front-end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: "HTML, CSS"
+//             },
+//             {
+//                 id: 2,
+//                 title: "Javascript"
+//             },
+//         ]
+//     },
+//     {
+//         topic: 'Back-end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: "NodeJS"
+//             },
+//             {
+//                 id: 2,
+//                 title: "PHP"
+//             },
+//         ]
+//     },
+// ]
+
+// var newCourses = topics.reduce(function(course,topic) {
+//     return course.concat(topic.courses);
+// },[]);
+
+// console.log(newCourses);
+
+// var html = newCourses.map(function(course) {
+//     return `
+//         <div>   
+//             <h2>${course.title}</h2>
+//             <p>ID: ${course.id}</p>
+//         </div>
+//     `;
+// })
+
+// console.log(html.join());
