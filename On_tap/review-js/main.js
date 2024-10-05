@@ -1540,31 +1540,61 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // Callback - Phần 2?
 
-Array.prototype.map2 = function(callback) {
+// Array.prototype.map2 = function(callback) {
 
-    let output = [],  arrayLength = this.length;
-    for(var i = 0 ; i < arrayLength; i++) {
-       var result =  callback(this[i],i);
-       output.push(result)
-    }
+//     let output = [],  arrayLength = this.length;
+//     for(var i = 0 ; i < arrayLength; i++) {
+//        var result =  callback(this[i],i);
+//        output.push(result)
+//     }
 
-    return output
-}
+//     return output;
+// }
 
-var courses = [
-    'JS',
-    'PHP',
-    'Ruby'
-]
+// var courses = [
+//     'JS',
+//     'PHP',
+//     'Ruby'
+// ]
 
 // courses.map(function(course) {
 //     console.log(course);
 // });
 
-let htmls = courses.map2(function(course, index) {
-    return `<h2>${course}</h2>`
+// let htmls = courses.map2(function(course, index) {
+//     return `<h2>${course}</h2>`
+// });
+
+// console.log(htmls);
+// console.log(htmls.join(''));
+
+// var courses = [
+//     'Javascript',
+//     'PHP'
+// ];
+
+// courses.length = 10;
+
+// for (var index in courses) {
+//     console.log(courses[index]);
+// }
+
+//Xay dung phuong thuc forEach
+
+
+Array.prototype.forEach2 = function(callback) {
+    for(var index in this) {
+       if( this.hasOwnProperty(index)){
+            callback(this[index],index,this);
+       }
+    }
+}
+var courses = [
+    'Javascript',
+    'PHP',
+    'Dart'
+];
+courses.length = 1000;
+courses.forEach2(function(course,index,originArray) {
+    console.log(course,index,originArray);
 });
-
-console.log(htmls);
-console.log(htmls.join(''));
-
