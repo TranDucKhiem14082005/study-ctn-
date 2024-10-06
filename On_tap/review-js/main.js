@@ -1580,21 +1580,109 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // }
 
 //Xay dung phuong thuc forEach
+//forEach không return  
+
+// Array.prototype.forEach2 = function(callback) {
+//     for(var index in this) { //Vi thằng for in không chỉ duyệt 
+//         //những element nằm trong mảng mà còn duyệt qua những element nằm
+//         //trong prototype
+//        if( this.hasOwnProperty(index)){ //kiểm tra xem  element có nằm trong thuộc tính gần nhất không
+//             callback(this[index],index,this);
+//        }
+//     }
+// }
+// var courses = [
+//     'Javascript',
+//     'PHP',
+//     'Dart'
+// ];
+// courses.length = 1000;
+// courses.forEach2(function(course,index,originArray) {
+//     console.log(course,index,originArray);
+// });
 
 
-Array.prototype.forEach2 = function(callback) {
-    for(var index in this) {
-       if( this.hasOwnProperty(index)){
-            callback(this[index],index,this);
-       }
+//Xây dựng phương thước filter: lộc qua những pt thỏa mản điều kiện.
+
+
+// Array.prototype.filter2 = function(callback) {
+//     var output = [];
+//     for(var index in this) {
+//         if( this.hasOwnProperty(index)){
+//             var result = callback(this[index],index,this);
+//             if(result) {
+//                 output.push(this[index]);
+//             }
+//         }
+//     }
+//     return output;
+// }
+// var courses = [
+//     {
+//         name: 'Javascript',
+//         coin: 680
+//     },
+//     {
+//         name: 'Ruby',
+//         coin: 730
+//     },
+//     {
+//         name: 'Java',
+//         coin: 980
+//     },
+//     {
+//         name: 'Dart',
+//         coin: 880
+//     },
+// ];
+
+// var filterCourses = courses.filter2(function(course,index,array) {
+    
+//     return course.coin > 700;
+// });
+
+
+//Xây dựng phương thức some2: tối thiểu một phần tử của mạng đúng
+// vả trả về true / false
+
+Array.prototype.some2 = function(callback) {
+    var output = false
+    for (var index in this) {
+        if(this.hasOwnProperty(index)) {
+           if( callback(this[index], index, this)) {
+                output = true;
+           }
+        }
     }
+    return output;
 }
+
 var courses = [
-    'Javascript',
-    'PHP',
-    'Dart'
+    {
+        name: 'Javascript',
+        coin: 680,
+        isFinish: true
+    },
+    {
+        name: 'Ruby',
+        coin: 730,
+        isFinish: true
+    },
+    {
+        name: 'Java',
+        coin: 980,
+        isFinish: false
+    },
+    {
+        name: 'Dart',
+        coin: 880,
+        isFinish: false
+    },
 ];
-courses.length = 1000;
-courses.forEach2(function(course,index,originArray) {
-    console.log(course,index,originArray);
+
+var result = courses.some2(function(course,index,array) {
+    return course.isFinish;
 });
+
+console.log(result);
+
