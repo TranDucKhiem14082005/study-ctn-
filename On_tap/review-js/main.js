@@ -1645,16 +1645,61 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 //Xây dựng phương thức some2: tối thiểu một phần tử của mạng đúng
 // vả trả về true / false
 
-Array.prototype.some2 = function(callback) {
-    var output = false
-    for (var index in this) {
+
+Array.prototype.map2 = function(callback) {
+    let output = [], arrayLength = this.length;
+    for(var i  = 0; i < arrayLength;i++) {
+        let result = callback(this[i], i);
+        output.push(result);
+    }
+    return output;
+}
+
+
+Array.prototype.filter2 = function(callback) {
+    var output = [];
+    for(var index in this) {
         if(this.hasOwnProperty(index)) {
-           if( callback(this[index], index, this)) {
-                output = true;
-           }
+            const kq = callback(this[index], index, this);
+            if(kq) {
+                output.push(this[index]);
+            }
         }
     }
     return output;
+}
+
+Array.prototype.every2 = function(callback) {
+    var output = true;
+    for(let index in this) {
+        if(this.hasOwnProperty(index)) {
+            const result = callback(this[index], index, this);
+            if(result) {
+                output = false;
+                break;
+            }
+        }
+    }
+    return output;
+};
+
+Array.prototype.some2 = function(callback) {
+    for (var index in this) {
+        if(this.hasOwnProperty(index)) {
+            if(this[index], index, this) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+Array.prototype.forEach2 = function(callback) {
+    for(let index in this) {
+        if(this.hasOwnProperty(index)) {
+            console.log(this[index],index, this);
+        }
+    }
 }
 
 var courses = [
@@ -1680,9 +1725,32 @@ var courses = [
     },
 ];
 
-var result = courses.some2(function(course,index,array) {
-    return course.isFinish;
+var result = courses.filter2(function(course,index,array) {
+    return course.coin > 700;
 });
 
 console.log(result);
 
+var result1 = courses.some2(function(course,index,array) {
+    return course.isFinish;
+});
+
+console.log(result1);
+
+var result2 = courses.forEach2(function(course,index,array) {
+    console.log(result2);
+});
+
+
+
+var result3 = courses.every2(function(course,index,array) {
+    return course.coin > 800;
+});
+
+console.log(result3);
+
+const result4 = courses.map2(function(course,index) {
+    return course;
+});
+
+console.log(result4);
