@@ -1754,3 +1754,60 @@ const result4 = courses.map2(function(course,index) {
 });
 
 console.log(result4);
+
+
+
+// ============================== //
+
+/*
+1. Xac dinh duoc diem dung
+2. Logic handle => tao ra diem dung
+3.
+
+*/
+
+
+function countDown(num) {
+    if(num > 0) {
+        console.log(num);
+        return countDown(num - 1);
+    }
+    return num;
+}
+
+countDown(10);
+
+function loop(start,end,callback) {
+    if( start <= end) {
+        callback(start)
+        return loop(start+1, end, callback)
+    }
+}
+
+
+
+var array = [ 'JS', 'PHP']
+
+loop(0,array.length-1, function(index) {
+    console.log(array[index]);
+});
+
+
+function giaiThua(num) {
+    var output = 1;
+    for(var i = num; i > 0; i--) {
+        output *= 1;
+    }
+    return output;
+}
+giaiThua(3);
+
+
+function giaiThua2(number) {
+    if(number > 0) {
+        return number * giaiThua2(number - 1);
+    }
+    return 1;
+}
+
+console.log(giaiThua2(6));
