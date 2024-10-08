@@ -1646,168 +1646,168 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // vả trả về true / false
 
 
-Array.prototype.map2 = function(callback) {
-    let output = [], arrayLength = this.length;
-    for(var i  = 0; i < arrayLength;i++) {
-        let result = callback(this[i], i);
-        output.push(result);
-    }
-    return output;
-}
+// Array.prototype.map2 = function(callback) {
+//     let output = [], arrayLength = this.length;
+//     for(var i  = 0; i < arrayLength;i++) {
+//         let result = callback(this[i], i);
+//         output.push(result);
+//     }
+//     return output;
+// }
 
 
-Array.prototype.filter2 = function(callback) {
-    var output = [];
-    for(var index in this) {
-        if(this.hasOwnProperty(index)) {
-            const kq = callback(this[index], index, this);
-            if(kq) {
-                output.push(this[index]);
-            }
-        }
-    }
-    return output;
-}
+// Array.prototype.filter2 = function(callback) {
+//     var output = [];
+//     for(var index in this) {
+//         if(this.hasOwnProperty(index)) {
+//             const kq = callback(this[index], index, this);
+//             if(kq) {
+//                 output.push(this[index]);
+//             }
+//         }
+//     }
+//     return output;
+// }
 
-Array.prototype.every2 = function(callback) {
-    var output = true;
-    for(let index in this) {
-        if(this.hasOwnProperty(index)) {
-            const result = callback(this[index], index, this);
-            if(result) {
-                output = false;
-                break;
-            }
-        }
-    }
-    return output;
-};
+// Array.prototype.every2 = function(callback) {
+//     var output = true;
+//     for(let index in this) {
+//         if(this.hasOwnProperty(index)) {
+//             const result = callback(this[index], index, this);
+//             if(result) {
+//                 output = false;
+//                 break;
+//             }
+//         }
+//     }
+//     return output;
+// };
 
-Array.prototype.some2 = function(callback) {
-    for (var index in this) {
-        if(this.hasOwnProperty(index)) {
-            if(this[index], index, this) {
-                return true;
-            }
-        }
-    }
-    return false;
-}
+// Array.prototype.some2 = function(callback) {
+//     for (var index in this) {
+//         if(this.hasOwnProperty(index)) {
+//             if(this[index], index, this) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
 
-Array.prototype.forEach2 = function(callback) {
-    for(let index in this) {
-        if(this.hasOwnProperty(index)) {
-            console.log(this[index],index, this);
-        }
-    }
-}
+// Array.prototype.forEach2 = function(callback) {
+//     for(let index in this) {
+//         if(this.hasOwnProperty(index)) {
+//             console.log(this[index],index, this);
+//         }
+//     }
+// }
 
-var courses = [
-    {
-        name: 'Javascript',
-        coin: 680,
-        isFinish: true
-    },
-    {
-        name: 'Ruby',
-        coin: 730,
-        isFinish: true
-    },
-    {
-        name: 'Java',
-        coin: 980,
-        isFinish: false
-    },
-    {
-        name: 'Dart',
-        coin: 880,
-        isFinish: false
-    },
-];
+// var courses = [
+//     {
+//         name: 'Javascript',
+//         coin: 680,
+//         isFinish: true
+//     },
+//     {
+//         name: 'Ruby',
+//         coin: 730,
+//         isFinish: true
+//     },
+//     {
+//         name: 'Java',
+//         coin: 980,
+//         isFinish: false
+//     },
+//     {
+//         name: 'Dart',
+//         coin: 880,
+//         isFinish: false
+//     },
+// ];
 
-var result = courses.filter2(function(course,index,array) {
-    return course.coin > 700;
-});
+// var result = courses.filter2(function(course,index,array) {
+//     return course.coin > 700;
+// });
 
-console.log(result);
+// console.log(result);
 
-var result1 = courses.some2(function(course,index,array) {
-    return course.isFinish;
-});
+// var result1 = courses.some2(function(course,index,array) {
+//     return course.isFinish;
+// });
 
-console.log(result1);
+// console.log(result1);
 
-var result2 = courses.forEach2(function(course,index,array) {
-    console.log(result2);
-});
-
-
-
-var result3 = courses.every2(function(course,index,array) {
-    return course.coin > 800;
-});
-
-console.log(result3);
-
-const result4 = courses.map2(function(course,index) {
-    return course;
-});
-
-console.log(result4);
+// var result2 = courses.forEach2(function(course,index,array) {
+//     console.log(result2);
+// });
 
 
 
-// ============================== //
+// var result3 = courses.every2(function(course,index,array) {
+//     return course.coin > 800;
+// });
 
-/*
-1. Xac dinh duoc diem dung
-2. Logic handle => tao ra diem dung
-3.
+// console.log(result3);
 
-*/
+// const result4 = courses.map2(function(course,index) {
+//     return course;
+// });
 
-
-function countDown(num) {
-    if(num > 0) {
-        console.log(num);
-        return countDown(num - 1);
-    }
-    return num;
-}
-
-countDown(10);
-
-function loop(start,end,callback) {
-    if( start <= end) {
-        callback(start)
-        return loop(start+1, end, callback)
-    }
-}
+// console.log(result4);
 
 
 
-var array = [ 'JS', 'PHP']
+// // ============================== //
 
-loop(0,array.length-1, function(index) {
-    console.log(array[index]);
-});
+// /*
+// 1. Xac dinh duoc diem dung
+// 2. Logic handle => tao ra diem dung
+// 3.
 
-
-function giaiThua(num) {
-    var output = 1;
-    for(var i = num; i > 0; i--) {
-        output *= 1;
-    }
-    return output;
-}
-giaiThua(3);
+// */
 
 
-function giaiThua2(number) {
-    if(number > 0) {
-        return number * giaiThua2(number - 1);
-    }
-    return 1;
-}
+// function countDown(num) {
+//     if(num > 0) {
+//         console.log(num);
+//         return countDown(num - 1);
+//     }
+//     return num;
+// }
 
-console.log(giaiThua2(6));
+// countDown(10);
+
+// function loop(start,end,callback) {
+//     if( start <= end) {
+//         callback(start)
+//         return loop(start+1, end, callback)
+//     }
+// }
+
+
+
+// var array = [ 'JS', 'PHP']
+
+// loop(0,array.length-1, function(index) {
+//     console.log(array[index]);
+// });
+
+
+// function giaiThua(num) {
+//     var output = 1;
+//     for(var i = num; i > 0; i--) {
+//         output *= 1;
+//     }
+//     return output;
+// }
+// giaiThua(3);
+
+
+// function giaiThua2(number) {
+//     if(number > 0) {
+//         return number * giaiThua2(number - 1);
+//     }
+//     return 1;
+// }
+
+// console.log(giaiThua2(6));
