@@ -46,11 +46,41 @@ console.log(headingNode);
 // Nếu đưa vào ID sai => Null
 let headingNodes = document.getElementsByClassName('heading');
 console.log(headingNodes);
+// ->Trả về HTML collection => có thể sử dụng vòng lặp, lặp qua những element trong đó
 
-let headingNode2s = document.getElementsByTagName('p');
+
+
+let headingNode2s = document.getElementsByTagName('p'); // -> select ra thẻ
 console.log(headingNode2s);
 
 //CSS Selecter
 
-let headingNode3s = document.querySelector('.box .heading-2');
-console.log(headingNode3s);
+let headingNode3s = document.querySelectorAll('.box .heading-2');
+// document.querySelector => trả về đúng thằng mình muốn
+
+//-> trả về nodelist (mảng)
+console.log(headingNode3s); 
+
+//HTML collection
+console.log(document.forms['form-3']);
+console.log(document.forms.testForm);
+
+//document.anchors => trả về a có attribute là name'
+
+//Cach 1
+let listItemNodes = 
+    document.querySelectorAll('.box-1 li')
+
+console.log(listItemNodes);
+
+let boxNode = 
+    document.querySelector('.box-1');
+
+//Công việc 1: sử dụng tới `boxNode`
+
+// CÔng việc 2: sử dụng tới li element là con của `box.1`
+console.log(boxNode);
+
+console.log(boxNode.querySelectorAll('li'));
+console.log(boxNode.getElementsByTagName('p'));
+console.log(boxNode.querySelector('p'));
