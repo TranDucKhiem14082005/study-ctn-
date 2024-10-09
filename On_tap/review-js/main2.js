@@ -84,3 +84,14 @@ console.log(boxNode);
 console.log(boxNode.querySelectorAll('li'));
 console.log(boxNode.getElementsByTagName('p'));
 console.log(boxNode.querySelector('p'));
+
+
+/*
+1. getElementById : return ve truc tiep cai element cua minh
+2. getElementByClassName: -> HTML collection
+3. getElementByTagName:-> HTML collection
+4. querySelector: Trả về trực tiếp element
+5. querySelectorAll: -> HTML collection
+6: HTML collection 
+7. document.write
+*/
