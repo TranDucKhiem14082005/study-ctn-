@@ -118,7 +118,6 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // let headingElement = 
 //     document.querySelector('.heading');
 
-
 // console.log(headingElement.innerText); //Geter   
 // // headingElement.innerText = 'New heading'; // thay đổi nội dung
 // console.log(headingElement.textContent);
@@ -133,7 +132,7 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // làm sao
 
 
-let boxElement = document.querySelector('.box');
+// let boxElement = document.querySelector('.box');
 
 // ** Inner
 
@@ -149,6 +148,33 @@ let boxElement = document.querySelector('.box');
 // 
 // Set
 
-boxElement.outerHTML = '<span>test</span>' ;
+// boxElement.outerHTML = '<spa~n>test</spa~n>' ;
 
-console.log(boxElement); // còn nhưng trong bộ nhớ => DOM k còn
+// console.log(boxElement); // còn nhưng trong bộ nhớ => DOM k còn~
+
+
+let headingElement = document.querySelector('.heading');
+
+console.log(headingElement.innerText); // lấy 
+console.log(headingElement.textContent); 
+headingElement.textContent = 'HELLO Guy'; // đặt lại một giá trị
+console.log(headingElement.innerText);
+
+//Thêm một element vào một element đã có sẵn trong DOM
+//Có thể thêm tất cả các element node, atttribute node, text node
+//  innerHTML / outerHTML
+
+let boxElement = document.querySelector('.box');
+
+boxElement.innerHTML =`<h1 >this is head of you, it havent anything in this</h1>`
+//Lấy ra thằng mà mình mới thêm vào
+console.log(boxElement.innerHTML);
+
+// in ra toàn bộ thằng box khi đã thêm Element vào
+console.log(boxElement);
+
+//Lấy ra Element mới thêm vào
+console.log(boxElement.querySelector('.box h1'));
+
+//Lấy nội dung của Element mới thêm vào.    
+console.log(boxElement.querySelector('.box h1').textContent);
