@@ -153,28 +153,72 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // console.log(boxElement); // còn nhưng trong bộ nhớ => DOM k còn~
 
 
-let headingElement = document.querySelector('.heading');
+// let headingElement = document.querySelector('.heading');
 
-console.log(headingElement.innerText); // lấy 
-console.log(headingElement.textContent); 
-headingElement.textContent = 'HELLO Guy'; // đặt lại một giá trị
-console.log(headingElement.innerText);
+// console.log(headingElement.innerText); // lấy 
+// console.log(headingElement.textContent); 
+// headingElement.textContent = 'HELLO Guy'; // đặt lại một giá trị
+// console.log(headingElement.innerText);
 
-//Thêm một element vào một element đã có sẵn trong DOM
-//Có thể thêm tất cả các element node, atttribute node, text node
-//  innerHTML / outerHTML
+// //Thêm một element vào một element đã có sẵn trong DOM
+// //Có thể thêm tất cả các element node, atttribute node, text node
+// //  innerHTML / outerHTML
+
+// let boxElement = document.querySelector('.box');
+
+// boxElement.innerHTML =`<h1 >this is head of you, it havent anything in this</h1>`
+// //Lấy ra thằng mà mình mới thêm vào
+// console.log(boxElement.innerHTML);
+
+// // in ra toàn bộ thằng box khi đã thgitêm Element vào
+// console.log(boxElement);
+
+// //Lấy ra Element mới thêm vào
+// console.log(boxElement.querySelector('.box h1'));
+
+// //Lấy nội dung của Element mới thêm vào.    
+// console.log(boxElement.querySelector('.box h1').textContent);
+
+
+//  Node properties | HTML DOM
+
+// let boxElement = document.querySelector('.box')
+
+// boxElement.style.width = '400px';
+// boxElement.style.height = '300px';
+// boxElement.style.backgroundColor = 'blue';
+
+// Object.assign(boxElement.style, {
+//     width: '200px',
+//     height: '400px',
+//     backgroundColor: 'orange'
+// })
+// console.log(boxElement.style.width); //Lấy ra thuộc tính CSS inline
+//Dùng để thêm CSS chứ không phải dùng để CSS
+
+// console.log(boxElement);
+
+//DOM style
+
+
+// ClassList property
+
+// add:thêm class
+//contains: kiểm trả có 1 class trong element 
+//remove: xóa
+//toggle: Có thì nó sẽ xóa element còn không có thì nó thêm
 
 let boxElement = document.querySelector('.box');
 
-boxElement.innerHTML =`<h1 >this is head of you, it havent anything in this</h1>`
-//Lấy ra thằng mà mình mới thêm vào
-console.log(boxElement.innerHTML);
+console.log(boxElement.classList.length);
+console.log(boxElement.classList.value);
+console.log(boxElement.classList[0]);
+boxElement.classList.add('red','blue');
 
-// in ra toàn bộ thằng box khi đã thêm Element vào
-console.log(boxElement);
+console.log(boxElement.classList.contains('red'));
 
-//Lấy ra Element mới thêm vào
-console.log(boxElement.querySelector('.box h1'));
+console.log((boxElement.classList.remove('red')));
 
-//Lấy nội dung của Element mới thêm vào.    
-console.log(boxElement.querySelector('.box h1').textContent);
+setInterval(() => {
+    boxElement.classList.toggle('red'); //Ứng dụng đèn led
+}, 1000);
