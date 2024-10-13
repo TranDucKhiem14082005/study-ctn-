@@ -208,17 +208,95 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 //remove: xóa
 //toggle: Có thì nó sẽ xóa element còn không có thì nó thêm
 
-let boxElement = document.querySelector('.box');
+// let boxElement = document.querySelector('.box');
 
-console.log(boxElement.classList.length);
-console.log(boxElement.classList.value);
-console.log(boxElement.classList[0]);
-boxElement.classList.add('red','blue');
+// console.log(boxElement.classList.length);
+// console.log(boxElement.classList.value);
+// console.log(boxElement.classList[0]);
+// boxElement.classList.add('red','blue');
 
-console.log(boxElement.classList.contains('red'));
+// console.log(boxElement.classList.contains('red')); //Kiểm tra 1
+// //element co một class nào hay không?
 
-console.log((boxElement.classList.remove('red')));
+// console.log((boxElement.classList.remove('red')));
 
-setInterval(() => {
-    boxElement.classList.toggle('red'); //Ứng dụng đèn led
-}, 1000);
+// setInterval(() => {
+//     boxElement.classList.toggle('red'); //Ứng dụng đèn led
+// }, 1000);
+
+
+
+//DOM events: những sự kiển diễn ra ở trong DOM
+//Sự kiến của trình quyệt hay là hành vì của người dùng.
+
+// 1. Attribute events: Sử dụng attribute để lắng nghe những 
+//sự kiện của người dùng
+
+
+
+// 2. Assign event using the element node: 
+//Gán events và sử dụng element node
+
+let h1Elements = document.querySelectorAll('h1');
+
+// h1Element.onclick = function() {
+//     // đoạn code trong này được thực thi khi sự kiện đã diễn ra
+//     console.log(Math.random());
+//     //Nó chỉ diễn ra khi mình thực hiện vào đúng element đó
+// };
+
+for(var i = 0; i < h1Elements.length; i++) {
+    h1Elements[i].onclick = function(e) {
+        console.log(e.target);
+    }
+};
+
+// h1Elements.onclick = function(e) {
+//     console.log(e.target);
+//     //target trả lại chính cái element chính các mình đang 
+//     //lắng nghe sự kiện
+// }
+
+
+
+// 1. Input / select
+
+
+// let inputValue;// sử dụng cách này để lưu gtri của input
+// // vào một biến
+
+// let inputElment = document.querySelector('input[type="text"]');
+
+// inputElment.onchange = function(e) {
+//     //Sự kiện thay đổi của một cái gì đó
+//     //Sự thay đổi đó phải khác giá trị với giá trị vừa bị thay
+//     //Sự kiện onchange chạy khi mình trỏ con trỏ chuột ra ngoài
+    //     console.log(e.target.value);
+// };
+
+// //Muốn gõ đến đâu thì thay đến đó thì sử dụng oninput
+
+// inputElment.oninput = function(e) {
+//     inputValue = (e.target.value);
+// }
+
+// console.log(inputValue);
+
+
+// let inputElment2 = document.querySelector('input[type="checkbox"]');
+// inputElment2.onchange = function(e) {
+//     console.log(e.target.checked);
+// };
+
+
+let inputElment3 = document.querySelector('select');
+inputElment3.onchange = function(e) {
+    console.log(e.target.value);
+};
+
+// 2. Key up / down
+
+let inputElment4 = document.querySelector('input[type="text"]');
+inputElment4.onkeyup = function(e) {
+    console.log(e.target.value);
+}
