@@ -115,6 +115,15 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
  */
 
 
+// let pElement = document.querySelector('p');
+
+// console.log(pElement.innerText);
+// console.log(pElement.textContent);
+// pElement.textContent = 'xin chao';
+// console.log(pElement.innerText);
+
+// console.log(pElement.innerHTML);
+
 // let headingElement = 
 //     document.querySelector('.heading');
 
@@ -132,13 +141,13 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // làm sao
 
 
-// let boxElement = document.querySelector('.box');
+let boxElement = document.querySelector('.box-1');
 
 // ** Inner
 
-// boxElement.innerHTML = '<h1 title = "Heading">New Heading</h1>' ; //set
+boxElement.innerHTML = '<h1 title = "Heading">New Heading</h1>' ; //set
 
-// console.log(boxElement.innerHTML); // get
+console.log(boxElement); // get
 
 // console.log(document.querySelector('h1').innerText);
 
@@ -191,7 +200,10 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // Object.assign(boxElement.style, {
 //     width: '200px',
 //     height: '400px',
-//     backgroundColor: 'orange'
+//     backgroundColor: 'orange',
+//     myFunction: function() {
+
+//     }
 // })
 // console.log(boxElement.style.width); //Lấy ra thuộc tính CSS inline
 //Dùng để thêm CSS chứ không phải dùng để CSS
@@ -237,7 +249,7 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // 2. Assign event using the element node: 
 //Gán events và sử dụng element node
 
-let h1Elements = document.querySelectorAll('h1');
+// let h1Elements = document.querySelectorAll('h1');
 
 // h1Element.onclick = function() {
 //     // đoạn code trong này được thực thi khi sự kiện đã diễn ra
@@ -245,11 +257,11 @@ let h1Elements = document.querySelectorAll('h1');
 //     //Nó chỉ diễn ra khi mình thực hiện vào đúng element đó
 // };
 
-for(var i = 0; i < h1Elements.length; i++) {
-    h1Elements[i].onclick = function(e) {
-        console.log(e.target);
-    }
-};
+// for(var i = 0; i < h1Elements.length; i++) {
+//     h1Elements[i].onclick = function(e) {
+//         console.log(e.target);
+//     }
+// };
 
 // h1Elements.onclick = function(e) {
 //     console.log(e.target);
@@ -289,14 +301,14 @@ for(var i = 0; i < h1Elements.length; i++) {
 // };
 
 
-let inputElment3 = document.querySelector('select');
-inputElment3.onchange = function(e) {
-    console.log(e.target.value);
-};
+// let inputElment3 = document.querySelector('select');
+// inputElment3.onchange = function(e) {
+//     console.log(e.target.value);
+// };
 
-// 2. Key up / down
+// // 2. Key up / down
 
-let inputElment4 = document.querySelector('input[type="text"]');
-inputElment4.onkeyup = function(e) {
-    console.log(e.target.value);
-}
+// let inputElment4 = document.querySelector('input[type="text"]');
+// inputElment4.onkeyup = function(e) {
+//     console.log(e.target.value);
+// }

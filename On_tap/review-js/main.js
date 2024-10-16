@@ -150,6 +150,10 @@ giá trị/vùng nhớ đó
     -Object: {}
 */
 
+// hello = function(a,b) {
+//     console.log(a+b);
+// }
+// console.log(hello(1,2));
 // Symboll
 
 // var id = Symbol('id'); //unique
@@ -763,8 +767,6 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 //     getName: function() {
 //         return this.name;
 //     }
-    
-
 // }
 // console.log(myInfo.getName());
 // //Thêm key và value nữa sau khi object đã được tạo.
@@ -792,20 +794,20 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // var newName = 'name';
 
-// var courses = {
-//     name: 'JavaScript',
-//     price: 1200,
-//     time: 3,
-//     getPrice: function() {
-//         return this.price;
-//     }
-// }
+var courses = {
+    name: 'JavaScript',
+    price: 1200,
+    time: 3,
+    getPrice: function() {
+        return this.price;
+    }
+}
 
 // console.log(courses.getPrice());
 
 // courses.address = 'khiemtran@gmail.com'
 // // console.log(courses.name); => lay value
-// // console.log(courses['price']); => Lay value
+// console.log(courses['price']); //=> Lay value
 // // console.log(courses); 
 // // console.log(courses[newName]); => lay value thong qua mot bien khac
 // // delete courses.name; => Xoa mot cap key va value
@@ -905,7 +907,7 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 //     this.firstName = firstName;
 //     this.lastName = lastName;
 //     this.avatar = avatar;
-// }
+// }   
 
 // //Su dung Prototype
 // User.prototype.className = 'KhiemTran';
@@ -916,7 +918,7 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // var user = new User('Linh','Tran','Avatar');
 
 // console.log(author);
-// console.log(user);
+console.log(user);
 
 
 // //Đối tượng Date => lấy ra giá trị thời gian
@@ -1258,7 +1260,7 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 // console.log(haveJava);
 
 // var course = courses.filter(function(course, index) {
-//     return course.coin === 200; //Tra ve nhung thang thoa dieu kien
+//     return course.coin === 200; //Tra ve những thằng thoa dieu kien
 // })
 
 // console.log(course);
@@ -1423,38 +1425,38 @@ console.log(typeof Pi.toFixed(3)); //Sau khi sd toFixed thì nó sẽ chuyển s
 
 // // 2. Lấy ra các khóa học đưa vào 1 mảng mới
 
-// var topics = [
-//     {
-//         topic: 'Front-end',
-//         courses: [
-//             {
-//                 id: 1,
-//                 title: "HTML, CSS"
-//             },
-//             {
-//                 id: 2,
-//                 title: "Javascript"
-//             },
-//         ]
-//     },
-//     {
-//         topic: 'Back-end',
-//         courses: [
-//             {
-//                 id: 1,
-//                 title: "NodeJS"
-//             },
-//             {
-//                 id: 2,
-//                 title: "PHP"
-//             },
-//         ]
-//     },
-// ]
+var topics = [
+    {
+        topic: 'Front-end',
+        courses: [
+            {
+                id: 1,
+                title: "HTML, CSS"
+            },
+            {
+                id: 2,
+                title: "Javascript"
+            },
+        ]
+    },
+    {
+        topic: 'Back-end',
+        courses: [
+            {
+                id: 1,
+                title: "NodeJS"
+            },
+            {
+                id: 2,
+                title: "PHP"
+            },
+        ]
+    },
+]
 
-// var newCourses = topics.reduce(function(course,topic) {
-//     return course.concat(topic.courses);
-// },[]);
+var newCourses = topics.reduce(function(course,topic) {
+    return course.concat(topic.courses);
+},[]);
 
 // console.log(newCourses);
 
