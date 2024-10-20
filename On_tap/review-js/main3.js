@@ -82,16 +82,16 @@ Get a character by index: Lấy 1 kí tự bởi một vị trí cho trước
 charAt(vị trí mà mình muốn từ kí tự), []
 */
 
-let name = '   Tran Duc Khiem   ';
-console.log(name.indexOf('Khiem'));
-console.log(name.lastIndexOf(''));
-console.log(name.search('Tran'));
-console.log(name.slice(0,4));
-console.log(name.replace('Tran','TRAN'));
-console.log(name.toUpperCase());
-console.log(name.toLowerCase());
-console.log(name.trim());
-console.log(name.split(' '));
+// let name = '   Tran Duc Khiem   ';
+// console.log(name.indexOf('Khiem'));
+// console.log(name.lastIndexOf(''));
+// console.log(name.search('Tran'));
+// console.log(name.slice(0,4));
+// console.log(name.replace('Tran','TRAN'));
+// console.log(name.toUpperCase());
+// console.log(name.toLowerCase());
+// console.log(name.trim());
+// console.log(name.split(' '));
 
 /*
 Array in Javascript
@@ -108,28 +108,113 @@ slicing: Cắt slice(vị trí bắt đầu, vị trí kết thúc)
 
 
 
-let language = [
-    'Javascript',
-    'PHP',
-    'C'
-];
+// let language = [
+//     'Javascript',
+//     'PHP',
+//     'C'
+// ];
 
-let language2 = [
-    'C++'
-]
+// let language2 = [
+//     'C++'
+// ]
 
-console.log(language);
-console.log(language[1]);
-console.log(language.length);
-console.log(language.splice(1,0,'Dart')); 
-console.log(language);
-console.log(language.length);
-console.log(language.pop()); 
-console.log(language);
-console.log(language.push('Ruby'));
-console.log(language);
-console.log(language.shift());
-console.log(language.unshift());
-console.log(language);
-console.log(language.concat(language2));
-console.log(language.slice(0,3));
+// console.log(language);
+// console.log(language[1]);
+// console.log(language.length);
+// console.log(language.splice(1,0,'Dart')); 
+// console.log(language);
+// console.log(language.length);
+// console.log(language.pop()); 
+// console.log(language);
+// console.log(language.push('Ruby'));
+// console.log(language);
+// console.log(language.shift());
+// console.log(language.unshift());
+// console.log(language);
+// console.log(language.concat(language2));
+// console.log(language.slice(0,3));
+
+
+// Các loại hàm trong JS
+
+// 1. Declaration function
+function showMessage() {
+    console.log('hello');
+};
+
+showMessage();
+
+//2. Expression function
+
+let showMessage2 = function() {
+    console.log('this is message 2');
+}
+
+showMessage2();
+
+// Object in JS : Lưu trữ thông tin của một đối tượng cụ thể
+let myPhone = 'phone';
+let myInfo = {
+    name: 'Khiemtran',
+    age: 19,
+    address: 'Nha Trang',
+    [myPhone]: 312312312,
+    getName: function(){
+        return this.name;
+    }
+}
+
+console.log(myInfo);
+
+console.log(myInfo.name);
+console.log(myInfo['age']);
+console.log(myInfo[myPhone]);
+
+console.log(delete myInfo.age);
+
+console.log(myInfo.getName());
+
+
+//Object constructor in JS
+function user(fristname,lastname,avatar) {
+    this.fristname = fristname;
+    this.lastname = lastname;
+    this.avatar = avatar;
+}
+
+let author = new user('Khiem','Tran','Avatar');
+console.log(author);
+
+// Câu lệnh if else
+
+let a = 3;
+let b = 5;
+if ( a > b) {
+    console.log('this correct');
+} else {
+    console.log('this not correct');
+}
+
+
+let date = 4;
+
+switch(date) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+        console.log('cac thu trong tuan');
+        break;
+    default:
+        console.log('khong phai cac thu trong tuan');
+}
+
+let course = {
+    name: 'javascript',
+    coin: 2000
+}
+
+let result = course.coin > 1000 ? 'khoa hoc nay cao hon 1k $' : false ;
+
+console.log(result);
