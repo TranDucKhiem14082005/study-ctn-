@@ -141,13 +141,13 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 // làm sao
 
 
-let boxElement = document.querySelector('.box-1');
+// let boxElement = document.querySelector('.box-1');
 
-// ** Inner
+// // ** Inner
 
-boxElement.innerHTML = '<h1 title = "Heading">New Heading</h1>' ; //set
+// boxElement.innerHTML = '<h1 title = "Heading">New Heading</h1>' ; //set
 
-console.log(boxElement); // get
+// console.log(boxElement); // get
 
 // console.log(document.querySelector('h1').innerText);
 
@@ -312,3 +312,46 @@ console.log(boxElement); // get
 // inputElment4.onkeyup = function(e) {
 //     console.log(e.target.value);
 // }
+
+// PreventDefault & StopPropagation
+
+
+//1: PreventDefault:loại bỏ hành vi mặt định của trình duyệt trên
+//một thẻ HTML
+
+//2: StopPropagation: Loại bỏ sự kiện nổi bọt
+
+// let aElement = document.querySelectorAll('a');
+
+// console.log(aElement);
+// for(let i = 0; i < aElement.length; i++) {
+//     aElement[i].onclick = function(e) {
+//         if(!e.target.href.startsWith('https://f8.edu.vn')) {
+//             e.preventDefault();
+//         }
+//     }
+// }
+
+// let ulElement = document.querySelector('ul');
+
+// ulElement.onmousedown = function(e) {
+//     e.preventDefault();
+// }
+
+// ulElement.onclick = function(e) {
+//     console.log(e.target);
+// }
+
+
+// 2 StopPropagation: SỰ kiện nổi bọt/ lan truyền
+
+document.querySelector('div').onclick = 
+    function() {
+        console.log('DIV');
+    }
+
+    document.querySelector('button').onclick =
+    function(e) {
+        e.stopPropagation();
+        console.log('CLICK ME~');
+    }

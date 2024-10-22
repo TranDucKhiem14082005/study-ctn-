@@ -218,3 +218,6 @@ let course = {
 let result = course.coin > 1000 ? 'khoa hoc nay cao hon 1k $' : false ;
 
 console.log(result);
+
+
+   
