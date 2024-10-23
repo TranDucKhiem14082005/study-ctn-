@@ -345,13 +345,57 @@ DOM: là đại diện cho cả website => truy cập vào Element,attribute,tex
 
 // 2 StopPropagation: SỰ kiện nổi bọt/ lan truyền
 
-document.querySelector('div').onclick = 
-    function() {
-        console.log('DIV');
-    }
+// document.querySelector('div').onclick = 
+//     function() {
+//         console.log('DIV');
+//     }
 
-    document.querySelector('button').onclick =
-    function(e) {
-        e.stopPropagation();
-        console.log('CLICK ME~');
-    }
+//     document.querySelector('button').onclick =
+//     function(e) {
+//         e.stopPropagation();
+//         console.log('CLICK ME~');
+//     }
+
+
+//1. Event listener: Xử lý đồng bộ
+//Một sự kiện diễn ra nhưng chúng ta muốn hủy bỏ hoặc lắng nghe
+//sự kiện đó tùy theo từng nhiệm vụ của mình
+
+let btn = document.getElementById('btn');
+
+// console.log(btn);
+
+function viec1() {
+    console.log('Viec 1');
+}
+
+btn.addEventListener('click',viec1);
+
+setTimeout(function() { //Khi đã lắng nghe xong 3s rồi thì sau
+    //3s nó không lắng nghe nữa.
+
+    btn.removeEventListener('click', viec1)
+},3000)
+
+// btn.addEventListener('click',function(e) {
+//     console.log('Event 1');
+// })
+
+
+// btn.addEventListener('click',function(e) {
+//     console.log('Event 2');
+// })
+
+// btn.addEventListener('click',function(e) {
+//     console.log('Event 3');
+// })
+
+//DOM event: Trong những trường hợp đơn giản mà không có nhu cầu gỡ bỏ nó
+//1. xử lí nhiều việc khi xảy ra: DOM Event: Bat dong bo
+//2. Lắng nghe / hủy bỏ lắng nghe
+// btn.onclick = function() {
+//     console.log('viec 1');
+//     console.log('viec 2');
+//     console.log('viec 3');
+
+// }
